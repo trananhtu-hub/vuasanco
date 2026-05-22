@@ -1,0 +1,3311 @@
+{
+  "general": {
+    "fullList": "Tất cả",
+    "ascending": "Tăng dần",
+    "descending": "Giảm dần",
+    "add": "Thêm",
+    "start": "Bắt đầu",
+    "end": "Kết thúc",
+    "open": "Mở",
+    "close": "Đóng",
+    "apply": "Áp dụng",
+    "range": "Khoảng",
+    "search": "Tìm kiếm",
+    "original": "Gốc",
+    "of": "của",
+    "results": "kết quả",
+    "pages": "trang",
+    "next": "Tiếp theo",
+    "prev": "Trước",
+    "is": "là",
+    "timeline": "Dòng thời gian",
+    "success": "Thành công",
+    "warning": "Cảnh báo",
+    "tip": "Mẹo",
+    "error": "Lỗi",
+    "select": "Chọn",
+    "selectAll": "Chọn tất cả",
+    "unselectAll": "Bỏ chọn tất cả",
+    "selected": "Đã chọn",
+    "enabled": "Đã bật",
+    "disabled": "Đã tắt",
+    "expired": "Đã hết hạn",
+    "active": "Hoạt động",
+    "revoked": "Đã thu hồi",
+    "new": "Mới",
+    "modified": "Đã sửa đổi",
+    "added": "Đã thêm",
+    "removed": "Đã xóa",
+    "remaining": "Còn lại",
+    "admin": "Quản trị viên",
+    "store": "Cửa hàng",
+    "details": "Chi tiết",
+    "items_one": "{{count}} mục",
+    "items_other": "{{count}} mục",
+    "countSelected": "Đã chọn {{count}}",
+    "countOfTotalSelected": "Đã chọn {{count}} / {{total}}",
+    "plusCount": "+ {{count}}",
+    "plusCountMore": "+ {{count}} nữa",
+    "areYouSure": "Bạn có chắc chắn không?",
+    "areYouSureDescription": "Bạn chuẩn bị xóa {{entity}} {{title}}. Hành động này không thể hoàn tác.",
+    "noRecordsFound": "Không tìm thấy dữ liệu",
+    "typeToConfirm": "Vui lòng nhập {val} để xác nhận:",
+    "noResultsTitle": "Không có kết quả",
+    "noResultsMessage": "Hãy thử thay đổi bộ lọc hoặc từ khóa tìm kiếm",
+    "noSearchResults": "Không có kết quả tìm kiếm",
+    "noSearchResultsFor": "Không có kết quả tìm kiếm cho <0>'{{query}}'</0>",
+    "noRecordsTitle": "Không có dữ liệu",
+    "noRecordsMessage": "Không có dữ liệu để hiển thị",
+    "noRecordsMessageFiltered": "Không có dữ liệu nào khớp với bộ lọc",
+    "unsavedChangesTitle": "Bạn có chắc chắn muốn thoát khỏi biểu mẫu này?",
+    "unsavedChangesDescription": "Bạn có các thay đổi chưa lưu sẽ bị mất nếu thoát khỏi biểu mẫu này.",
+    "includesTaxTooltip": "Giá trong cột này đã bao gồm thuế.",
+    "excludesTaxTooltip": "Giá trong cột này chưa bao gồm thuế.",
+    "noMoreData": "Không còn dữ liệu"
+  },
+  "json": {
+    "header": "JSON",
+    "numberOfKeys_one": "{{count}} khóa",
+    "numberOfKeys_other": "{{count}} khóa",
+    "drawer": {
+      "header_one": "JSON <0>· {{count}} khóa</0>",
+      "header_other": "JSON <0>· {{count}} khóa</0>",
+      "description": "Xem dữ liệu JSON cho đối tượng này."
+    }
+  },
+  "metadata": {
+    "header": "Siêu dữ liệu (Metadata)",
+    "numberOfKeys_one": "{{count}} khóa",
+    "numberOfKeys_other": "{{count}} khóa",
+    "edit": {
+      "header": "Chỉnh sửa siêu dữ liệu",
+      "description": "Chỉnh sửa siêu dữ liệu cho đối tượng này.",
+      "successToast": "Siêu dữ liệu đã được cập nhật thành công.",
+      "actions": {
+        "insertRowAbove": "Chèn hàng lên trên",
+        "insertRowBelow": "Chèn hàng xuống dưới",
+        "deleteRow": "Xóa hàng"
+      },
+      "labels": {
+        "key": "Khóa",
+        "value": "Giá trị"
+      },
+      "complexRow": {
+        "label": "Một số hàng bị vô hiệu hóa",
+        "description": "Đối tượng này chứa siêu dữ liệu không nguyên thủy, chẳng hạn như mảng hoặc đối tượng, không thể chỉnh sửa ở đây. Để chỉnh sửa các hàng bị vô hiệu hóa, hãy sử dụng trực tiếp API.",
+        "tooltip": "Hàng này bị vô hiệu hóa vì nó chứa dữ liệu không nguyên thủy."
+      }
+    }
+  },
+  "validation": {
+    "mustBeInt": "Giá trị phải là số nguyên.",
+    "mustBePositive": "Giá trị phải là số dương."
+  },
+  "actions": {
+    "save": "Lưu",
+    "saveChanges": "Lưu thay đổi",
+    "saveAsDraft": "Lưu nháp",
+    "saveAndClose": "Lưu và đóng",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "duplicate": "Nhân bản",
+    "publish": "Xuất bản",
+    "create": "Tạo mới",
+    "delete": "Xóa",
+    "remove": "Gỡ bỏ",
+    "revoke": "Thu hồi",
+    "cancel": "Hủy",
+    "forceConfirm": "Bắt buộc xác nhận",
+    "continueEdit": "Tiếp tục chỉnh sửa",
+    "enable": "Bật",
+    "disable": "Tắt",
+    "undo": "Hoàn tác",
+    "complete": "Hoàn thành",
+    "viewDetails": "Xem chi tiết",
+    "back": "Quay lại",
+    "close": "Đóng",
+    "showMore": "Xem thêm",
+    "continue": "Tiếp tục",
+    "continueWithEmail": "Tiếp tục với Email",
+    "idCopiedToClipboard": "Đã sao chép ID vào khay nhớ tạm",
+    "editVariantImages": "Chỉnh sửa hình ảnh biến thể",
+    "editImages": "Chỉnh sửa hình ảnh",
+    "addReason": "Thêm lý do",
+    "addNote": "Thêm ghi chú",
+    "reset": "Đặt lại",
+    "confirm": "Xác nhận",
+    "edit": "Chỉnh sửa",
+    "addItems": "Thêm mặt hàng",
+    "download": "Tải xuống",
+    "clear": "Xóa trống",
+    "clearAll": "Xóa tất cả",
+    "apply": "Áp dụng",
+    "add": "Thêm",
+    "select": "Chọn",
+    "browse": "Duyệt",
+    "logout": "Đăng xuất",
+    "hide": "Ẩn",
+    "export": "Xuất dữ liệu",
+    "import": "Nhập dữ liệu",
+    "cannotUndo": "Hành động này không thể hoàn tác"
+  },
+  "operators": {
+    "in": "Trong"
+  },
+  "app": {
+    "search": {
+      "label": "Tìm kiếm",
+      "title": "Tìm kiếm",
+      "description": "Tìm kiếm trên toàn bộ cửa hàng của bạn, bao gồm đơn hàng, sản phẩm, khách hàng và hơn thế nữa.",
+      "allAreas": "Tất cả các khu vực",
+      "navigation": "Điều hướng",
+      "openResult": "Mở kết quả",
+      "showMore": "Xem thêm",
+      "placeholder": "Chuyển đến hoặc tìm kiếm bất cứ thứ gì...",
+      "noResultsTitle": "Không tìm thấy kết quả",
+      "noResultsMessage": "Chúng tôi không thể tìm thấy bất cứ điều gì phù hợp với tìm kiếm của bạn.",
+      "emptySearchTitle": "Nhập để tìm kiếm",
+      "emptySearchMessage": "Nhập từ khóa hoặc cụm từ để khám phá.",
+      "loadMore": "Tải thêm {{count}}",
+      "groups": {
+        "all": "Tất cả các khu vực",
+        "customer": "Khách hàng",
+        "customerGroup": "Nhóm khách hàng",
+        "product": "Sản phẩm",
+        "productVariant": "Biến thể sản phẩm",
+        "inventory": "Kho hàng",
+        "reservation": "Đặt trước",
+        "category": "Danh mục",
+        "collection": "Bộ sưu tập",
+        "order": "Đơn hàng",
+        "promotion": "Khuyến mãi",
+        "campaign": "Chiến dịch",
+        "priceList": "Bảng giá",
+        "user": "Người dùng",
+        "region": "Khu vực",
+        "taxRegion": "Khu vực thuế",
+        "returnReason": "Lý do trả hàng",
+        "salesChannel": "Kênh bán hàng",
+        "productType": "Loại sản phẩm",
+        "productTag": "Thẻ sản phẩm",
+        "location": "Vị trí",
+        "shippingProfile": "Hồ sơ giao hàng",
+        "publishableApiKey": "Khóa API có thể xuất bản",
+        "secretApiKey": "Khóa API bí mật",
+        "command": "Lệnh",
+        "navigation": "Điều hướng"
+      }
+    },
+    "keyboardShortcuts": {
+      "pageShortcut": "Chuyển đến",
+      "settingShortcut": "Cài đặt",
+      "commandShortcut": "Lệnh",
+      "then": "sau đó",
+      "navigation": {
+        "goToOrders": "Đơn hàng",
+        "goToProducts": "Sản phẩm",
+        "goToCollections": "Bộ sưu tập",
+        "goToCategories": "Danh mục",
+        "goToCustomers": "Khách hàng",
+        "goToCustomerGroups": "Nhóm khách hàng",
+        "goToInventory": "Kho hàng",
+        "goToReservations": "Đặt trước",
+        "goToPriceLists": "Bảng giá",
+        "goToPromotions": "Khuyến mãi",
+        "goToCampaigns": "Chiến dịch"
+      },
+      "settings": {
+        "goToSettings": "Cài đặt",
+        "goToStore": "Cửa hàng",
+        "goToUsers": "Người dùng",
+        "goToRegions": "Khu vực",
+        "goToTaxRegions": "Khu vực thuế",
+        "goToSalesChannels": "Kênh bán hàng",
+        "goToProductTypes": "Loại sản phẩm",
+        "goToLocations": "Vị trí",
+        "goToPublishableApiKeys": "Khóa API có thể xuất bản",
+        "goToSecretApiKeys": "Khóa API bí mật",
+        "goToWorkflows": "Quy trình làm việc",
+        "goToProfile": "Hồ sơ",
+        "goToReturnReasons": "Lý do trả hàng"
+      }
+    },
+    "menus": {
+      "user": {
+        "documentation": "Tài liệu",
+        "changelog": "Nhật ký thay đổi",
+        "shortcuts": "Phím tắt",
+        "profileSettings": "Cài đặt hồ sơ",
+        "theme": {
+          "label": "Giao diện",
+          "dark": "Tối",
+          "light": "Sáng",
+          "system": "Hệ thống"
+        }
+      },
+      "store": {
+        "label": "Cửa hàng",
+        "storeSettings": "Cài đặt cửa hàng"
+      },
+      "actions": {
+        "logout": "Đăng xuất"
+      }
+    },
+    "nav": {
+      "accessibility": {
+        "title": "Điều hướng",
+        "description": "Menu điều hướng cho bảng điều khiển."
+      },
+      "common": {
+        "extensions": "Tiện ích mở rộng"
+      },
+      "main": {
+        "store": "Cửa hàng",
+        "storeSettings": "Cài đặt cửa hàng"
+      },
+      "settings": {
+        "header": "Cài đặt",
+        "general": "Cài đặt chung",
+        "developer": "Nhà phát triển",
+        "myAccount": "Tài khoản của tôi"
+      }
+    }
+  },
+  "dataGrid": {
+    "columns": {
+      "view": "Xem",
+      "resetToDefault": "Đặt lại mặc định",
+      "disabled": "Thay đổi cột hiển thị đã bị tắt."
+    },
+    "shortcuts": {
+      "label": "Phím tắt",
+      "commands": {
+        "undo": "Hoàn tác",
+        "redo": "Làm lại",
+        "copy": "Sao chép",
+        "paste": "Dán",
+        "edit": "Chỉnh sửa",
+        "delete": "Xóa",
+        "clear": "Xóa trống",
+        "moveUp": "Di chuyển lên",
+        "moveDown": "Di chuyển xuống",
+        "moveLeft": "Di chuyển sang trái",
+        "moveRight": "Di chuyển sang phải",
+        "moveTop": "Di chuyển lên cùng",
+        "moveBottom": "Di chuyển xuống dưới cùng",
+        "selectDown": "Chọn xuống",
+        "selectUp": "Chọn lên",
+        "selectColumnDown": "Chọn cột xuống",
+        "selectColumnUp": "Chọn cột lên",
+        "focusToolbar": "Tiêu điểm thanh công cụ",
+        "focusCancel": "Hủy tiêu điểm"
+      }
+    },
+    "errors": {
+      "fixError": "Sửa lỗi",
+      "count_one": "{{count}} lỗi",
+      "count_other": "{{count}} lỗi"
+    }
+  },
+  "filters": {
+    "sortLabel": "Sắp xếp",
+    "collapse": {
+      "all": "Thu gọn tất cả"
+    },
+    "filterLabel": "Bộ lọc",
+    "searchLabel": "Tìm kiếm",
+    "date": {
+      "today": "Hôm nay",
+      "lastSevenDays": "7 ngày qua",
+      "lastThirtyDays": "30 ngày qua",
+      "lastNinetyDays": "90 ngày qua",
+      "lastTwelveMonths": "12 tháng qua",
+      "custom": "Tùy chỉnh",
+      "from": "Từ",
+      "to": "Đến",
+      "starting": "Bắt đầu",
+      "ending": "Kết thúc"
+    },
+    "compare": {
+      "lessThan": "Nhỏ hơn",
+      "greaterThan": "Lớn hơn",
+      "exact": "Chính xác",
+      "range": "Khoảng",
+      "lessThanLabel": "nhỏ hơn {{value}}",
+      "greaterThanLabel": "lớn hơn {{value}}",
+      "andLabel": "và"
+    },
+    "sorting": {
+      "alphabeticallyAsc": "A đến Z",
+      "alphabeticallyDesc": "Z đến A",
+      "dateAsc": "Mới nhất trước",
+      "dateDesc": "Cũ nhất trước"
+    },
+    "radio": {
+      "yes": "Có",
+      "no": "Không",
+      "true": "Đúng",
+      "false": "Sai"
+    },
+    "addFilter": "Thêm bộ lọc"
+  },
+  "errorBoundary": {
+    "badRequestTitle": "400 - Yêu cầu không hợp lệ",
+    "badRequestMessage": "Máy chủ không thể hiểu yêu cầu do cú pháp không hợp lệ.",
+    "notFoundTitle": "404 - Không có trang nào ở địa chỉ này",
+    "notFoundMessage": "Kiểm tra URL và thử lại hoặc sử dụng thanh tìm kiếm để tìm những gì bạn đang tìm kiếm.",
+    "internalServerErrorTitle": "500 - Lỗi máy chủ nội bộ",
+    "internalServerErrorMessage": "Đã xảy ra lỗi không mong muốn trên máy chủ. Vui lòng thử lại sau.",
+    "defaultTitle": "Đã xảy ra lỗi",
+    "defaultMessage": "Đã xảy ra lỗi không mong muốn khi hiển thị trang này.",
+    "noMatchMessage": "Trang bạn đang tìm kiếm không tồn tại.",
+    "backToDashboard": "Quay lại bảng điều khiển"
+  },
+  "addresses": {
+    "title": "Địa chỉ",
+    "shippingAddress": {
+      "header": "Địa chỉ giao hàng",
+      "editHeader": "Chỉnh sửa địa chỉ giao hàng",
+      "editLabel": "Địa chỉ giao hàng",
+      "label": "Địa chỉ giao hàng"
+    },
+    "billingAddress": {
+      "header": "Địa chỉ thanh toán",
+      "editHeader": "Chỉnh sửa địa chỉ thanh toán",
+      "editLabel": "Địa chỉ thanh toán",
+      "label": "Địa chỉ thanh toán",
+      "sameAsShipping": "Giống với địa chỉ giao hàng"
+    },
+    "contactHeading": "Liên hệ",
+    "locationHeading": "Vị trí"
+  },
+  "email": {
+    "editHeader": "Chỉnh sửa Email",
+    "editLabel": "Email",
+    "label": "Email"
+  },
+  "transferOwnership": {
+    "header": "Chuyển nhượng quyền sở hữu",
+    "label": "Chuyển nhượng quyền sở hữu",
+    "details": {
+      "order": "Chi tiết đơn hàng",
+      "draft": "Chi tiết bản nháp"
+    },
+    "currentOwner": {
+      "label": "Chủ sở hữu hiện tại",
+      "hint": "Chủ sở hữu hiện tại của đơn hàng."
+    },
+    "newOwner": {
+      "label": "Chủ sở hữu mới",
+      "hint": "Chủ sở hữu mới để chuyển đơn hàng cho."
+    },
+    "validation": {
+      "mustBeDifferent": "Chủ sở hữu mới phải khác với chủ sở hữu hiện tại.",
+      "required": "Cần có chủ sở hữu mới."
+    }
+  },
+  "sales_channels": {
+    "availableIn": "Có sẵn ở <0>{{x}}</0> trong số <1>{{y}}</1> kênh bán hàng"
+  },
+"products": {
+    "domain": "Sản phẩm",
+    "list": {
+      "noRecordsMessage": "Tạo sản phẩm đầu tiên của bạn để bắt đầu bán hàng."
+    },
+    "edit": {
+      "header": "Chỉnh sửa Sản phẩm",
+      "description": "Chỉnh sửa thông tin chi tiết của sản phẩm.",
+      "successToast": "Sản phẩm {{title}} đã được cập nhật thành công."
+    },
+    "create": {
+      "title": "Tạo Sản phẩm",
+      "description": "Tạo một sản phẩm mới.",
+      "header": "Cài đặt chung",
+      "tabs": {
+        "details": "Chi tiết",
+        "organize": "Tổ chức",
+        "variants": "Biến thể",
+        "inventory": "Bộ kho hàng"
+      },
+      "errors": {
+        "variants": "Vui lòng chọn ít nhất một biến thể.",
+        "options": "Vui lòng tạo ít nhất một tùy chọn.",
+        "uniqueSku": "Mã SKU phải là duy nhất."
+      },
+      "inventory": {
+        "heading": "Bộ kho hàng (Inventory kits)",
+        "label": "Thêm các mặt hàng vào bộ kho của biến thể.",
+        "itemPlaceholder": "Chọn mặt hàng trong kho",
+        "quantityPlaceholder": "Cần bao nhiêu mặt hàng này cho bộ sản phẩm?"
+      },
+      "variants": {
+        "header": "Biến thể",
+        "subHeadingTitle": "Có, đây là sản phẩm có các biến thể",
+        "subHeadingDescription": "Nếu bỏ chọn, chúng tôi sẽ tự động tạo một biến thể mặc định",
+        "optionTitle": {
+          "placeholder": "Kích cỡ"
+        },
+        "optionValues": {
+          "placeholder": "Nhỏ, Vừa, Lớn"
+        },
+        "productVariants": {
+          "label": "Các biến thể của sản phẩm",
+          "hint": "Thứ tự này sẽ ảnh hưởng đến cách sắp xếp các biến thể trên trang cửa hàng của bạn.",
+          "alert": "Thêm tùy chọn để tạo biến thể.",
+          "tip": "Các biến thể không được chọn sẽ không được tạo. Bạn luôn có thể tạo và chỉnh sửa các biến thể sau này."
+        },
+        "productOptions": {
+          "label": "Tùy chọn sản phẩm",
+          "hint": "Xác định các tùy chọn cho sản phẩm, ví dụ: màu sắc, kích cỡ, v.v."
+        }
+      },
+      "successToast": "Sản phẩm {{title}} đã được tạo thành công."
+    },
+    "export": {
+      "header": "Xuất Danh sách Sản phẩm",
+      "description": "Xuất danh sách sản phẩm ra tệp CSV.",
+      "success": {
+        "title": "Chúng tôi đang xử lý tệp xuất của bạn",
+        "description": "Việc xuất dữ liệu có thể mất vài phút. Chúng tôi sẽ thông báo cho bạn khi hoàn tất."
+      },
+      "filters": {
+        "title": "Bộ lọc",
+        "description": "Áp dụng bộ lọc trong bảng tổng quan để điều chỉnh dữ liệu xuất này"
+      },
+      "columns": {
+        "title": "Cột hiển thị",
+        "description": "Tùy chỉnh dữ liệu xuất để đáp ứng nhu cầu cụ thể"
+      }
+    },
+    "import": {
+      "header": "Nhập Danh sách Sản phẩm",
+      "uploadLabel": "Nhập Sản phẩm",
+      "uploadHint": "Kéo và thả tệp CSV hoặc nhấp để tải lên",
+      "description": "Nhập sản phẩm bằng cách cung cấp tệp CSV theo định dạng đã được xác định trước",
+      "template": {
+        "title": "Bạn không chắc chắn về cách sắp xếp danh sách?",
+        "description": "Tải xuống biểu mẫu bên dưới để đảm bảo bạn đang làm theo đúng định dạng."
+      },
+      "upload": {
+        "title": "Tải lên tệp CSV",
+        "description": "Thông qua việc nhập file, bạn có thể thêm hoặc cập nhật sản phẩm. Để cập nhật sản phẩm hiện có, bạn phải sử dụng handle (đường dẫn) và ID hiện có, để cập nhật biến thể bạn phải dùng ID hiện có. Bạn sẽ được yêu cầu xác nhận trước khi hệ thống nhập sản phẩm.",
+        "preprocessing": "Đang tiền xử lý...",
+        "productsToCreate": "Các sản phẩm sẽ được tạo mới",
+        "productsToUpdate": "Các sản phẩm sẽ được cập nhật"
+      },
+      "success": {
+        "title": "Chúng tôi đang xử lý tệp nhập của bạn",
+        "description": "Việc nhập dữ liệu có thể mất một lúc. Chúng tôi sẽ thông báo cho bạn khi hoàn tất."
+      }
+    },
+    "deleteWarning": "Bạn chuẩn bị xóa sản phẩm {{title}}. Hành động này không thể hoàn tác.",
+    "variants": {
+      "header": "Biến thể",
+      "empty": {
+        "heading": "Không có biến thể",
+        "description": "Không có biến thể nào để hiển thị."
+      },
+      "filtered": {
+        "heading": "Không có kết quả",
+        "description": "Không có biến thể nào khớp với tiêu chí lọc hiện tại."
+      }
+    },
+    "attributes": "Thuộc tính",
+    "editAttributes": "Chỉnh sửa Thuộc tính",
+    "editOptions": "Chỉnh sửa Tùy chọn",
+    "editPrices": "Chỉnh sửa Giá",
+    "media": {
+      "label": "Đa phương tiện",
+      "editHint": "Thêm hình ảnh/video cho sản phẩm để trưng bày trên cửa hàng của bạn.",
+      "manageImageVariants": "Quản lý các biến thể liên kết",
+      "makeThumbnail": "Đặt làm ảnh thu nhỏ",
+      "uploadImagesLabel": "Tải ảnh lên",
+      "uploadImagesHint": "Kéo và thả hình ảnh vào đây hoặc nhấp để tải lên.",
+      "invalidFileType": "'{{name}}' không phải là loại tệp được hỗ trợ. Các loại tệp được hỗ trợ là: {{types}}.",
+      "fileTooLarge": "Một hoặc nhiều tệp vượt quá kích thước tối đa là {{size}}: {{name}}",
+      "failedToUpload": "Tải lên phương tiện thất bại. Vui lòng thử lại.",
+      "deleteWarning_one": "Bạn chuẩn bị xóa {{count}} hình ảnh. Hành động này không thể hoàn tác.",
+      "deleteWarning_other": "Bạn chuẩn bị xóa {{count}} hình ảnh. Hành động này không thể hoàn tác.",
+      "deleteWarningWithThumbnail_one": "Bạn chuẩn bị xóa {{count}} hình ảnh bao gồm cả ảnh thu nhỏ. Hành động này không thể hoàn tác.",
+      "deleteWarningWithThumbnail_other": "Bạn chuẩn bị xóa {{count}} hình ảnh bao gồm cả ảnh thu nhỏ. Hành động này không thể hoàn tác.",
+      "thumbnailTooltip": "Ảnh thu nhỏ",
+      "galleryLabel": "Bộ sưu tập ảnh",
+      "downloadImageLabel": "Tải xuống hình ảnh hiện tại",
+      "deleteImageLabel": "Xóa hình ảnh hiện tại",
+      "emptyState": {
+        "header": "Chưa có hình ảnh nào",
+        "description": "Thêm hình ảnh để trưng bày trên cửa hàng của bạn.",
+        "action": "Thêm phương tiện"
+      },
+      "successToast": "Phương tiện đã được cập nhật thành công.",
+      "variantImages": "Hình ảnh biến thể",
+      "showAvailableImages": "Hiển thị hình ảnh có sẵn",
+      "availableImages": "Chọn hình ảnh",
+      "selectToAdd": "Thêm hình ảnh sản phẩm vào biến thể. Để thêm hình ảnh mới, hãy thêm chúng vào sản phẩm trước.",
+      "removeSelected": "Xóa mục đã chọn"
+    },
+    "variantMedia": {
+      "label": "Phương tiện của biến thể",
+      "manageVariants": "Quản lý biến thể",
+      "addToMultipleVariants": "Thêm vào nhiều biến thể",
+      "manageVariantsDescription": "Quản lý các biến thể được liên kết cho hình ảnh này",
+      "successToast": "Hình ảnh biến thể đã cập nhật thành công.",
+      "emptyState": {
+        "header": "Chưa có hình ảnh nào",
+        "description": "Thêm hình ảnh vào biến thể để trưng bày trên cửa hàng của bạn.",
+        "action": "Thêm phương tiện"
+      }
+    },
+    "discountableHint": "Khi bỏ chọn, các chương trình giảm giá sẽ không được áp dụng cho sản phẩm này.",
+    "noSalesChannels": "Không có sẵn ở bất kỳ kênh bán hàng nào",
+    "variantCount_one": "{{count}} biến thể",
+    "variantCount_other": "{{count}} biến thể",
+    "deleteVariantWarning": "Bạn chuẩn bị xóa biến thể {{title}}. Hành động này không thể hoàn tác.",
+    "productStatus": {
+      "draft": "Bản nháp",
+      "published": "Đã xuất bản",
+      "proposed": "Được đề xuất",
+      "rejected": "Bị từ chối"
+    },
+    "columns": {
+      "product_display": "Sản phẩm",
+      "variants_count": "Biến thể",
+      "sales_channels_display": "Kênh bán hàng",
+      "collection": "Bộ sưu tập",
+      "status": "Trạng thái",
+      "thumbnail": "Ảnh thu nhỏ",
+      "title": "Tiêu đề",
+      "handle": "Đường dẫn (Handle)",
+      "created_at": "Ngày tạo",
+      "updated_at": "Cập nhật lần cuối"
+    },
+    "fields": {
+      "title": {
+        "label": "Tiêu đề",
+        "hint": "Đặt cho sản phẩm của bạn một tiêu đề ngắn gọn và rõ ràng.<0/> 50-60 ký tự là độ dài được đề xuất cho các công cụ tìm kiếm.",
+        "placeholder": "Ví dụ: Áo khoác mùa đông"
+      },
+      "subtitle": {
+        "label": "Tiêu đề phụ",
+        "placeholder": "Ví dụ: Ấm áp và thoải mái"
+      },
+      "handle": {
+        "label": "Đường dẫn (Handle)",
+        "tooltip": "Handle được sử dụng để tham chiếu sản phẩm trên cửa hàng của bạn. Nếu không được chỉ định, handle sẽ được tạo tự động từ tiêu đề sản phẩm.",
+        "placeholder": "ao-khoac-mua-dong"
+      },
+      "description": {
+        "label": "Mô tả",
+        "hint": "Cung cấp cho sản phẩm một mô tả ngắn gọn và rõ ràng.<0/> 120-160 ký tự là độ dài lý tưởng cho SEO.",
+        "placeholder": "Một chiếc áo khoác ấm áp và thoải mái..."
+      },
+      "discountable": {
+        "label": "Có thể giảm giá",
+        "hint": "Khi bỏ chọn, các khuyến mãi sẽ không áp dụng cho sản phẩm này"
+      },
+      "shipping_profile": {
+        "label": "Hồ sơ vận chuyển",
+        "hint": "Kết nối sản phẩm với một hồ sơ vận chuyển"
+      },
+      "type": {
+        "label": "Loại"
+      },
+      "collection": {
+        "label": "Bộ sưu tập"
+      },
+      "categories": {
+        "label": "Danh mục"
+      },
+      "tags": {
+        "label": "Thẻ (Tags)"
+      },
+      "sales_channels": {
+        "label": "Kênh bán hàng",
+        "hint": "Sản phẩm này sẽ chỉ hiển thị ở kênh bán hàng mặc định nếu không có thay đổi nào."
+      },
+      "countryOrigin": {
+        "label": "Xuất xứ"
+      },
+      "material": {
+        "label": "Chất liệu"
+      },
+      "width": {
+        "label": "Chiều rộng"
+      },
+      "length": {
+        "label": "Chiều dài"
+      },
+      "height": {
+        "label": "Chiều cao"
+      },
+      "weight": {
+        "label": "Cân nặng"
+      },
+      "options": {
+        "label": "Tùy chọn sản phẩm",
+        "hint": "Tùy chọn được sử dụng để xác định màu sắc, kích cỡ,... của sản phẩm",
+        "add": "Thêm tùy chọn",
+        "optionTitle": "Tên tùy chọn",
+        "optionTitlePlaceholder": "Màu sắc",
+        "variations": "Các biến thể (phân cách bằng dấu phẩy)",
+        "variantionsPlaceholder": "Đỏ, Xanh dương, Xanh lá"
+      },
+      "variants": {
+        "label": "Các biến thể của sản phẩm",
+        "hint": "Các biến thể không được chọn sẽ không được tạo. Bảng xếp hạng này sẽ ảnh hưởng đến cách chúng hiển thị trên frontend."
+      },
+      "mid_code": {
+        "label": "Mã MID"
+      },
+      "hs_code": {
+        "label": "Mã HS"
+      }
+    },
+    "variant": {
+      "edit": {
+        "header": "Chỉnh sửa biến thể",
+        "success": "Biến thể sản phẩm đã được chỉnh sửa thành công"
+      },
+      "create": {
+        "header": "Chi tiết biến thể"
+      },
+      "deleteWarning": "Bạn có chắc chắn muốn xóa biến thể này không?",
+      "pricesPagination": "1 - {{current}} trên tổng {{total}} mức giá",
+      "tableItemAvailable": "{{availableCount}} có sẵn",
+      "tableItem_one": "{{availableCount}} có sẵn tại {{locationCount}} vị trí",
+      "tableItem_other": "{{availableCount}} có sẵn tại {{locationCount}} vị trí",
+      "inventory": {
+        "notManaged": "Không quản lý tồn kho",
+        "manageItems": "Quản lý mặt hàng trong kho",
+        "notManagedDesc": "Tồn kho không được quản lý cho biến thể này. Bật ‘Quản lý kho’ để theo dõi số lượng tồn kho của biến thể.",
+        "manageKit": "Quản lý bộ kho hàng",
+        "navigateToItem": "Đi đến mặt hàng trong kho",
+        "actions": {
+          "inventoryItems": "Đi đến mặt hàng trong kho",
+          "inventoryKit": "Hiển thị các mặt hàng trong kho"
+        },
+        "inventoryKit": "Bộ kho hàng",
+        "inventoryKitHint": "Biến thể này có bao gồm nhiều mặt hàng trong kho không?",
+        "validation": {
+          "itemId": "Vui lòng chọn mặt hàng trong kho.",
+          "quantity": "Yêu cầu phải có Số lượng. Vui lòng nhập số dương."
+        },
+        "header": "Kho hàng & Tồn kho",
+        "editItemDetails": "Chỉnh sửa chi tiết mặt hàng",
+        "manageInventoryLabel": "Quản lý kho hàng",
+        "manageInventoryHint": "Khi được bật, chúng tôi sẽ tự động thay đổi số lượng tồn kho cho bạn khi có đơn hàng mới hoặc trả hàng.",
+        "allowBackordersLabel": "Cho phép đặt hàng trước (Backorders)",
+        "allowBackordersHint": "Khi được bật, khách hàng có thể mua biến thể này ngay cả khi số lượng có sẵn bằng không.",
+        "toast": {
+          "levelsBatch": "Mức tồn kho đã được cập nhật.",
+          "update": "Mặt hàng trong kho đã cập nhật thành công.",
+          "updateLevel": "Mức tồn kho đã cập nhật thành công.",
+          "itemsManageSuccess": "Các mặt hàng trong kho đã cập nhật thành công."
+        }
+      }
+    },
+    "options": {
+      "header": "Tùy chọn",
+      "edit": {
+        "header": "Chỉnh sửa tùy chọn",
+        "successToast": "Tùy chọn {{title}} đã cập nhật thành công."
+      },
+      "create": {
+        "header": "Tạo Tùy chọn",
+        "successToast": "Tùy chọn {{title}} đã tạo thành công."
+      },
+      "deleteWarning": "Bạn chuẩn bị xóa tùy chọn sản phẩm: {{title}}. Hành động này không thể hoàn tác."
+    },
+    "organization": {
+      "header": "Tổ chức",
+      "edit": {
+        "header": "Chỉnh sửa Tổ chức",
+        "toasts": {
+          "success": "Cập nhật tổ chức của {{title}} thành công."
+        }
+      }
+    },
+    "stock": {
+      "heading": "Quản lý mức tồn kho và vị trí sản phẩm",
+      "description": "Cập nhật mức tồn kho được lưu trữ cho tất cả các biến thể của sản phẩm.",
+      "loading": "Vui lòng đợi một lát...",
+      "tooltips": {
+        "alreadyManaged": "Mặt hàng trong kho này đã có thể chỉnh sửa trong mục {{title}}.",
+        "alreadyManagedWithSku": "Mặt hàng trong kho này đã có thể chỉnh sửa trong mục {{title}} ({{sku}})."
+      }
+    },
+    "shippingProfile": {
+      "header": "Cấu hình vận chuyển",
+      "edit": {
+        "header": "Cấu hình Vận chuyển",
+        "toasts": {
+          "success": "Cập nhật hồ sơ vận chuyển cho {{title}} thành công."
+        }
+      },
+      "create": {
+        "errors": {
+          "required": "Yêu cầu phải có Hồ sơ vận chuyển"
+        }
+      }
+    },
+    "toasts": {
+      "delete": {
+        "success": {
+          "header": "Sản phẩm đã bị xóa",
+          "description": "{{title}} đã được xóa thành công."
+        },
+        "error": {
+          "header": "Xóa sản phẩm thất bại"
+        }
+      }
+    }
+  },
+  "collections": {
+    "domain": "Bộ sưu tập",
+    "subtitle": "Tổ chức sản phẩm thành các bộ sưu tập.",
+    "createCollection": "Tạo Bộ sưu tập",
+    "createCollectionHint": "Tạo bộ sưu tập mới để phân loại sản phẩm của bạn.",
+    "createSuccess": "Bộ sưu tập đã được tạo thành công.",
+    "editCollection": "Chỉnh sửa Bộ sưu tập",
+    "handleTooltip": "Đường dẫn (Handle) được sử dụng để tham chiếu bộ sưu tập trên cửa hàng của bạn. Nếu để trống, hệ thống sẽ tự tạo từ tên bộ sưu tập.",
+    "deleteWarning": "Bạn chuẩn bị xóa bộ sưu tập {{title}}. Hành động này không thể hoàn tác.",
+    "removeSingleProductWarning": "Bạn chuẩn bị xóa sản phẩm {{title}} khỏi bộ sưu tập. Hành động này không thể hoàn tác.",
+    "removeProductsWarning_one": "Bạn chuẩn bị xóa {{count}} sản phẩm khỏi bộ sưu tập. Hành động này không thể hoàn tác.",
+    "removeProductsWarning_other": "Bạn chuẩn bị xóa {{count}} sản phẩm khỏi bộ sưu tập. Hành động này không thể hoàn tác.",
+    "products": {
+      "list": {
+        "noRecordsMessage": "Không có sản phẩm nào trong bộ sưu tập này."
+      },
+      "add": {
+        "successToast_one": "Sản phẩm đã được thêm vào bộ sưu tập thành công.",
+        "successToast_other": "Các sản phẩm đã được thêm vào bộ sưu tập thành công."
+      },
+      "remove": {
+        "successToast_one": "Sản phẩm đã bị xóa khỏi bộ sưu tập.",
+        "successToast_other": "Các sản phẩm đã bị xóa khỏi bộ sưu tập."
+      }
+    }
+  },
+  "categories": {
+    "domain": "Danh mục",
+    "subtitle": "Tổ chức sản phẩm thành các danh mục và quản lý phân cấp của các danh mục đó.",
+    "create": {
+      "header": "Tạo Danh mục",
+      "hint": "Tạo danh mục mới để tổ chức sản phẩm của bạn.",
+      "tabs": {
+        "details": "Chi tiết",
+        "organize": "Tổ chức xếp hạng"
+      },
+      "successToast": "Danh mục {{name}} đã được tạo thành công."
+    },
+    "edit": {
+      "header": "Chỉnh sửa Danh mục",
+      "description": "Chỉnh sửa danh mục để cập nhật thông tin chi tiết.",
+      "successToast": "Danh mục đã được cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa danh mục {{name}}. Hành động này không thể hoàn tác.",
+      "successToast": "Danh mục {{name}} đã được xóa thành công."
+    },
+    "products": {
+      "add": {
+        "disabledTooltip": "Sản phẩm này đã nằm trong danh mục.",
+        "successToast_one": "Đã thêm {{count}} sản phẩm vào danh mục.",
+        "successToast_other": "Đã thêm {{count}} sản phẩm vào danh mục."
+      },
+      "remove": {
+        "confirmation_one": "Bạn chuẩn bị xóa {{count}} sản phẩm khỏi danh mục. Hành động này không thể hoàn tác.",
+        "confirmation_other": "Bạn chuẩn bị xóa {{count}} sản phẩm khỏi danh mục. Hành động này không thể hoàn tác.",
+        "successToast_one": "Đã xóa {{count}} sản phẩm khỏi danh mục.",
+        "successToast_other": "Đã xóa {{count}} sản phẩm khỏi danh mục."
+      },
+      "list": {
+        "noRecordsMessage": "Không có sản phẩm nào trong danh mục."
+      }
+    },
+    "organize": {
+      "header": "Tổ chức",
+      "action": "Chỉnh sửa xếp hạng"
+    },
+    "fields": {
+      "visibility": {
+        "label": "Độ hiển thị",
+        "internal": "Nội bộ",
+        "public": "Công khai"
+      },
+      "status": {
+        "label": "Trạng thái",
+        "active": "Hoạt động",
+        "inactive": "Không hoạt động"
+      },
+      "path": {
+        "label": "Đường dẫn",
+        "tooltip": "Hiển thị đường dẫn đầy đủ của danh mục."
+      },
+      "children": {
+        "label": "Danh mục con"
+      },
+      "new": {
+        "label": "Mới"
+      }
+    }
+  },
+  "inventory": {
+    "domain": "Kho hàng",
+    "subtitle": "Quản lý các mặt hàng trong kho của bạn",
+    "reserved": "Đã đặt trước",
+    "available": "Có sẵn",
+    "locationLevels": "Vị trí",
+    "associatedVariants": "Các biến thể liên kết",
+    "manageLocations": "Quản lý vị trí",
+    "manageLocationQuantity": "Quản lý số lượng tại vị trí",
+    "deleteWarning": "Bạn chuẩn bị xóa một mặt hàng trong kho. Hành động này không thể hoàn tác.",
+    "editItemDetails": "Chỉnh sửa chi tiết mặt hàng",
+    "quantityAcrossLocations": "{{quantity}} mặt hàng trên {{locations}} vị trí",
+    "levelDeleted": "Mức tồn kho đã bị xóa thành công.",
+    "create": {
+      "title": "Tạo Mặt hàng trong kho",
+      "details": "Chi tiết",
+      "availability": "Khả năng cung cấp",
+      "locations": "Vị trí",
+      "attributes": "Thuộc tính",
+      "requiresShipping": "Yêu cầu giao hàng",
+      "requiresShippingHint": "Mặt hàng này có yêu cầu giao hàng không?",
+      "successToast": "Mặt hàng trong kho đã được tạo thành công."
+    },
+    "reservation": {
+      "header": "Đặt trước cho {{itemName}}",
+      "editItemDetails": "Chỉnh sửa đặt trước",
+      "lineItemId": "ID dòng mặt hàng",
+      "orderID": "ID Đơn hàng",
+      "description": "Mô tả",
+      "location": "Vị trí",
+      "inStockAtLocation": "Tồn kho tại vị trí này",
+      "availableAtLocation": "Có sẵn tại vị trí này",
+      "reservedAtLocation": "Đã đặt trước tại vị trí này",
+      "reservedAmount": "Số lượng đặt trước",
+      "create": "Tạo đặt trước",
+      "itemToReserve": "Mặt hàng để đặt",
+      "quantityPlaceholder": "Bạn muốn đặt trước số lượng bao nhiêu?",
+      "descriptionPlaceholder": "Đây là loại đặt trước nào?",
+      "successToast": "Đặt trước đã được tạo thành công.",
+      "updateSuccessToast": "Đặt trước đã cập nhật thành công.",
+      "deleteSuccessToast": "Đặt trước đã xóa thành công.",
+      "errors": {
+        "noAvaliableQuantity": "Vị trí kho không có số lượng khả dụng.",
+        "quantityOutOfRange": "Số lượng tối thiểu là 1 và tối đa là {{max}}"
+      }
+    },
+    "adjustInventory": {
+      "errors": {
+        "stockedQuantity": "Số lượng lưu kho không thể cập nhật nhỏ hơn số lượng đã đặt trước là {{quantity}}."
+      }
+    },
+    "toast": {
+      "updateLocations": "Đã cập nhật vị trí thành công.",
+      "updateLevel": "Mức tồn kho đã cập nhật thành công.",
+      "updateItem": "Mặt hàng trong kho đã cập nhật thành công."
+    },
+    "stock": {
+      "title": "Cập nhật mức tồn kho",
+      "description": "Cập nhật mức tồn kho được lưu trữ cho các mặt hàng đã chọn.",
+      "action": "Chỉnh sửa mức tồn kho",
+      "placeholder": "Chưa được kích hoạt",
+      "disablePrompt_one": "Bạn chuẩn bị vô hiệu hóa {{count}} cấp độ vị trí. Hành động này không thể hoàn tác.",
+      "disablePrompt_other": "Bạn chuẩn bị vô hiệu hóa {{count}} cấp độ vị trí. Hành động này không thể hoàn tác.",
+      "disabledToggleTooltip": "Không thể vô hiệu hóa: hãy xóa số lượng sắp về và/hoặc số lượng đã đặt trước trước khi vô hiệu hóa.",
+      "successToast": "Các mức tồn kho đã cập nhật thành công."
+    }
+  },
+"giftCards": {
+    "domain": "Thẻ quà tặng",
+    "editGiftCard": "Chỉnh sửa Thẻ quà tặng",
+    "createGiftCard": "Tạo Thẻ quà tặng",
+    "createGiftCardHint": "Tạo thủ công thẻ quà tặng có thể sử dụng làm phương thức thanh toán trong cửa hàng của bạn.",
+    "selectRegionFirst": "Vui lòng chọn khu vực trước",
+    "deleteGiftCardWarning": "Bạn chuẩn bị xóa thẻ quà tặng {{code}}. Hành động này không thể hoàn tác.",
+    "balanceHigherThanValue": "Số dư không được cao hơn giá trị ban đầu.",
+    "balanceLowerThanZero": "Số dư không thể là số âm.",
+    "expiryDateHint": "Các quốc gia có luật khác nhau về ngày hết hạn của thẻ quà tặng. Đảm bảo kiểm tra các quy định của địa phương trước khi đặt ngày hết hạn.",
+    "regionHint": "Thay đổi khu vực của thẻ quà tặng cũng sẽ thay đổi loại tiền tệ của nó, có thể ảnh hưởng đến giá trị tiền tệ.",
+    "enabledHint": "Chỉ định xem thẻ quà tặng được bật hay tắt.",
+    "balance": "Số dư",
+    "currentBalance": "Số dư hiện tại",
+    "initialBalance": "Số dư ban đầu",
+    "personalMessage": "Tin nhắn cá nhân",
+    "recipient": "Người nhận"
+  },
+  "customers": {
+    "domain": "Khách hàng",
+    "list": {
+      "noRecordsMessage": "Khách hàng của bạn sẽ xuất hiện ở đây."
+    },
+    "create": {
+      "header": "Tạo Khách hàng",
+      "hint": "Tạo khách hàng mới và quản lý thông tin của họ.",
+      "successToast": "Khách hàng {{email}} đã được tạo thành công."
+    },
+    "groups": {
+      "label": "Nhóm khách hàng",
+      "remove": "Bạn có chắc chắn muốn xóa khách hàng khỏi nhóm \"{{name}}\" không?",
+      "removeMany": "Bạn có chắc chắn muốn xóa khách hàng khỏi các nhóm sau: {{groups}}?",
+      "alreadyAddedTooltip": "Khách hàng này đã ở trong nhóm.",
+      "list": {
+        "noRecordsMessage": "Khách hàng này không thuộc bất kỳ nhóm nào."
+      },
+      "add": {
+        "success": "Đã thêm khách hàng vào: {{groups}}.",
+        "list": {
+          "noRecordsMessage": "Vui lòng tạo một nhóm khách hàng trước."
+        }
+      },
+      "removed": {
+        "success": "Đã xóa khách hàng khỏi: {{groups}}.",
+        "list": {
+          "noRecordsMessage": "Vui lòng tạo một nhóm khách hàng trước."
+        }
+      }
+    },
+    "edit": {
+      "header": "Chỉnh sửa Khách hàng",
+      "emailDisabledTooltip": "Không thể thay đổi địa chỉ email cho những khách hàng đã đăng ký tài khoản.",
+      "successToast": "Khách hàng {{email}} đã cập nhật thành công."
+    },
+    "delete": {
+      "title": "Xóa Khách hàng",
+      "description": "Bạn chuẩn bị xóa khách hàng {{email}}. Hành động này không thể hoàn tác.",
+      "successToast": "Khách hàng {{email}} đã bị xóa thành công."
+    },
+    "fields": {
+      "guest": "Khách vãng lai",
+      "registered": "Đã đăng ký",
+      "groups": "Nhóm"
+    },
+    "registered": "Đã đăng ký",
+    "guest": "Khách vãng lai",
+    "hasAccount": "Đã có tài khoản",
+    "addresses": {
+      "title": "Địa chỉ",
+      "fields": {
+        "addressName": "Tên địa chỉ",
+        "address1": "Địa chỉ 1",
+        "address2": "Địa chỉ 2",
+        "city": "Thành phố",
+        "province": "Tỉnh/Thành phố",
+        "postalCode": "Mã bưu điện",
+        "country": "Quốc gia",
+        "phone": "Số điện thoại",
+        "company": "Công ty",
+        "countryCode": "Mã quốc gia",
+        "provinceCode": "Mã tỉnh"
+      },
+      "create": {
+        "header": "Tạo Địa chỉ",
+        "hint": "Tạo địa chỉ mới cho khách hàng.",
+        "successToast": "Địa chỉ đã được tạo thành công."
+      }
+    }
+  },
+  "customerGroups": {
+    "domain": "Nhóm khách hàng",
+    "subtitle": "Phân loại khách hàng thành các nhóm. Các nhóm có thể có các chương trình khuyến mãi và mức giá khác nhau.",
+    "list": {
+      "empty": {
+        "heading": "Không có nhóm khách hàng",
+        "description": "Không có nhóm khách hàng nào để hiển thị."
+      },
+      "filtered": {
+        "heading": "Không có kết quả",
+        "description": "Không có nhóm khách hàng nào khớp với tiêu chí lọc."
+      }
+    },
+    "create": {
+      "header": "Tạo Nhóm Khách hàng",
+      "hint": "Tạo nhóm khách hàng mới để phân khúc khách hàng của bạn.",
+      "successToast": "Nhóm khách hàng {{name}} đã được tạo thành công."
+    },
+    "edit": {
+      "header": "Chỉnh sửa Nhóm Khách hàng",
+      "successToast": "Nhóm khách hàng {{name}} đã được cập nhật thành công."
+    },
+    "delete": {
+      "title": "Xóa Nhóm Khách hàng",
+      "description": "Bạn chuẩn bị xóa nhóm khách hàng {{name}}. Hành động này không thể hoàn tác.",
+      "successToast": "Nhóm khách hàng {{name}} đã bị xóa thành công."
+    },
+    "customers": {
+      "alreadyAddedTooltip": "Khách hàng này đã được thêm vào nhóm.",
+      "add": {
+        "successToast_one": "Đã thêm khách hàng vào nhóm thành công.",
+        "successToast_other": "Đã thêm các khách hàng vào nhóm thành công.",
+        "list": {
+          "noRecordsMessage": "Vui lòng tạo một khách hàng trước."
+        }
+      },
+      "remove": {
+        "title_one": "Xóa khách hàng",
+        "title_other": "Xóa các khách hàng",
+        "description_one": "Bạn chuẩn bị xóa {{count}} khách hàng khỏi nhóm. Hành động này không thể hoàn tác.",
+        "description_other": "Bạn chuẩn bị xóa {{count}} khách hàng khỏi nhóm. Hành động này không thể hoàn tác."
+      },
+      "list": {
+        "noRecordsMessage": "Nhóm này không có khách hàng nào."
+      }
+    }
+  },
+  "orders": {
+    "drafts": "Đơn hàng nháp",  
+    "giftCardsStoreCreditLines": "Thẻ quà tặng & hạn mức tín dụng",
+    "creditLines": {
+      "title": "Hạn mức tín dụng",
+      "total": "Tổng tất cả hạn mức tín dụng",
+      "creditOrDebit": "Có / Nợ",
+      "createCreditLine": "Tạo hạn mức tín dụng",
+      "createCreditLineSuccess": "Tạo hạn mức tín dụng thành công",
+      "createCreditLineError": "Lỗi tạo hạn mức tín dụng",
+      "createCreditLineDescription": "Tạo hạn mức tín dụng cho số tiền {{amount}}",
+      "operation": "Thao tác",
+      "credit": "Ghi có",
+      "creditDescription": "Thêm một khoản tiền dương vào đơn hàng",
+      "debit": "Ghi nợ",
+      "debitDescription": "Trừ một khoản tiền âm khỏi đơn hàng"
+    },
+    "balanceSettlement": {
+      "title": "Quyết toán số dư",
+      "settlementType": "Loại quyết toán",
+      "settlementTypes": {
+        "paymentMethod": "Phương thức thanh toán",
+        "paymentMethodDescription": "Hoàn tiền vào phương thức thanh toán",
+        "creditLine": "Tín dụng cửa hàng",
+        "creditLineDescription": "Hoàn tiền dưới dạng tín dụng cửa hàng"
+      }
+    },
+    "domain": "Đơn hàng",
+    "claim": "Khiếu nại",
+    "exchange": "Đổi hàng",
+    "return": "Trả hàng",
+    "cancelWarning": "Bạn chuẩn bị hủy đơn hàng {{id}}. Hành động này không thể hoàn tác.",
+    "orderCanceled": "Hủy đơn hàng thành công",
+    "onDateFromSalesChannel": "{{date}} từ {{salesChannel}}",
+    "list": {
+      "noRecordsMessage": "Đơn hàng của bạn sẽ xuất hiện ở đây."
+    },
+    "export": {
+      "header": "Xuất danh sách đơn hàng",
+      "description": "Xuất danh sách đơn hàng ra file CSV.",
+      "success": {
+        "title": "Bắt đầu xuất dữ liệu",
+        "description": "Bạn sẽ được thông báo khi file xuất đã sẵn sàng."
+      },
+      "filters": {
+        "title": "Bộ lọc",
+        "description": "Các bộ lọc sau sẽ được áp dụng cho bản xuất."
+      }
+    },
+    "status": {
+      "not_paid": "Chưa thanh toán",
+      "pending": "Đang chờ xử lý",
+      "completed": "Đã hoàn thành",
+      "draft": "Bản nháp",
+      "archived": "Đã lưu trữ",
+      "canceled": "Đã hủy",
+      "requires_action": "Cần xử lý"
+    },
+    "summary": {
+      "requestReturn": "Yêu cầu trả hàng",
+      "allocateItems": "Phân bổ mặt hàng",
+      "editOrder": "Chỉnh sửa đơn hàng",
+      "editOrderContinue": "Tiếp tục chỉnh sửa đơn",
+      "inventoryKit": "Bao gồm {{count}}x mặt hàng kho",
+      "itemTotal": "Tổng tiền hàng",
+      "shippingTotal": "Tổng phí vận chuyển",
+      "discountTotal": "Tổng tiền giảm giá",
+      "taxTotalIncl": "Tổng thuế (đã bao gồm)",
+      "itemSubtotal": "Tạm tính hàng hóa",
+      "shippingSubtotal": "Tạm tính vận chuyển",
+      "discountSubtotal": "Tạm tính giảm giá",
+      "taxTotal": "Tổng thuế",
+      "totalAfterDiscount": "Tổng cộng sau giảm giá"
+    },
+    "transfer": {
+      "title": "Chuyển nhượng quyền sở hữu",
+      "requestSuccess": "Yêu cầu chuyển đơn hàng đã gửi tới: {{email}}.",
+      "currentOwner": "Chủ sở hữu hiện tại",
+      "newOwner": "Chủ sở hữu mới",
+      "currentOwnerDescription": "Khách hàng hiện đang liên kết với đơn hàng này.",
+      "newOwnerDescription": "Khách hàng sẽ nhận đơn hàng này."
+    },
+    "payment": {
+      "title": "Thanh toán",
+      "isReadyToBeCaptured": "Thanh toán <0/> đã sẵn sàng để thu tiền.",
+      "totalPaidByCustomer": "Tổng khách đã trả",
+      "totalStoreCreditRefunds": "Tổng hoàn tiền tín dụng",
+      "capture": "Thu tiền thanh toán",
+      "capture_short": "Thu tiền",
+      "refund": "Hoàn tiền",
+      "markAsPaid": "Đánh dấu đã thanh toán",
+      "statusLabel": "Trạng thái thanh toán",
+      "statusTitle": "Trạng thái thanh toán",
+      "status": {
+        "notPaid": "Chưa thanh toán",
+        "authorized": "Đã ủy quyền",
+        "partiallyAuthorized": "Ủy quyền 1 phần",
+        "awaiting": "Đang chờ",
+        "captured": "Đã thu tiền",
+        "partiallyRefunded": "Hoàn tiền 1 phần",
+        "partiallyCaptured": "Thu tiền 1 phần",
+        "refunded": "Đã hoàn tiền",
+        "canceled": "Đã hủy",
+        "requiresAction": "Cần xử lý"
+      },
+      "capturePayment": "Thanh toán {{amount}} sẽ được thu.",
+      "capturePaymentSuccess": "Thu tiền thanh toán {{amount}} thành công",
+      "markAsPaidPayment": "Thanh toán {{amount}} sẽ được đánh dấu là đã thanh toán.",
+      "markAsPaidPaymentSuccess": "Đánh dấu thanh toán {{amount}} thành công",
+      "createRefund": "Tạo hoàn tiền",
+      "refundPaymentSuccess": "Hoàn số tiền {{amount}} thành công",
+      "createRefundWrongQuantity": "Số lượng phải là một số từ 1 đến {{number}}",
+      "refundAmount": "Hoàn tiền {{ amount }}",
+      "paymentLink": "Sao chép link thanh toán cho {{ amount }}",
+      "selectPaymentToRefund": "Chọn khoản để hoàn tiền"
+    },
+    "edits": {
+      "title": "Chỉnh sửa đơn hàng",
+      "confirm": "Xác nhận chỉnh sửa",
+      "confirmText": "Bạn sắp xác nhận Chỉnh sửa đơn hàng. Hành động này không thể hoàn tác.",
+      "cancel": "Hủy chỉnh sửa",
+      "currentItems": "Mặt hàng hiện tại",
+      "currentItemsDescription": "Điều chỉnh số lượng hoặc xóa bỏ.",
+      "addItemsDescription": "Bạn có thể thêm các mặt hàng mới vào đơn.",
+      "addItems": "Thêm mặt hàng",
+      "amountPaid": "Số tiền đã trả",
+      "newTotal": "Tổng mới",
+      "differenceDue": "Chênh lệch cần trả",
+      "create": "Sửa Đơn hàng",
+      "currentTotal": "Tổng hiện tại",
+      "noteHint": "Thêm ghi chú nội bộ cho bản sửa đổi này",
+      "cancelSuccessToast": "Đã hủy chỉnh sửa đơn",
+      "createSuccessToast": "Đã tạo yêu cầu chỉnh sửa đơn",
+      "activeChangeError": "Đã có thay đổi đang hoạt động trên đơn (trả hàng, đổi hàng...). Vui lòng hoàn thành hoặc hủy thay đổi đó trước khi sửa đơn.",
+      "panel": {
+        "title": "Yêu cầu sửa đơn hàng",
+        "titlePending": "Chờ sửa đơn hàng"
+      },
+      "toast": {
+        "canceledSuccessfully": "Đã hủy sửa đơn hàng",
+        "confirmedSuccessfully": "Đã xác nhận sửa đơn"
+      },
+      "validation": {
+        "quantityLowerThanFulfillment": "Không thể đặt số lượng nhỏ hơn hoặc bằng số lượng đã giao"
+      }
+    },
+    "edit": {
+      "email": {
+        "title": "Sửa email",
+        "requestSuccess": "Đã cập nhật email đơn hàng thành {{email}}."
+      },
+      "shippingAddress": {
+        "title": "Sửa địa chỉ giao hàng",
+        "requestSuccess": "Đã cập nhật địa chỉ giao."
+      },
+      "billingAddress": {
+        "title": "Sửa địa chỉ thanh toán",
+        "requestSuccess": "Đã cập nhật địa chỉ thanh toán."
+      }
+    },
+    "returns": {
+      "create": "Tạo trả hàng",
+      "confirm": "Xác nhận trả hàng",
+      "confirmText": "Bạn sắp xác nhận Trả hàng. Hành động này không thể hoàn tác.",
+      "inbound": "Hàng gửi về",
+      "outbound": "Hàng gửi đi",
+      "sendNotification": "Gửi thông báo",
+      "sendNotificationHint": "Thông báo cho khách về việc trả hàng.",
+      "returnTotal": "Tổng tiền trả hàng",
+      "inboundTotal": "Tổng gửi về",
+      "estDifference": "Ước tính chênh lệch",
+      "outstandingAmount": "Số tiền còn lại",
+      "reason": "Lý do",
+      "reasonHint": "Chọn lý do khách muốn trả hàng.",
+      "note": "Ghi chú",
+      "noInventoryLevel": "Không có cấp độ kho",
+      "noInventoryLevelDesc": "Vị trí đã chọn không có cấp độ tồn kho cho các mặt hàng này. Có thể yêu cầu trả hàng nhưng không thể nhận hàng cho đến khi tạo mức tồn kho.",
+      "noteHint": "Bạn có thể gõ tự do nếu muốn ghi rõ nội dung.",
+      "location": "Vị trí",
+      "locationHint": "Chọn vị trí bạn muốn trả hàng về.",
+      "inboundShipping": "Vận chuyển hàng trả",
+      "inboundShippingHint": "Chọn phương thức vận chuyển.",
+      "returnableQuantityLabel": "Số lượng có thể trả",
+      "refundableAmountLabel": "Số tiền có thể hoàn",
+      "returnRequestedInfo": "Yêu cầu trả {{requestedItemsCount}}x mặt hàng",
+      "returnReceivedInfo": "Đã nhận {{requestedItemsCount}}x mặt hàng trả lại",
+      "itemReceived": "Mặt hàng đã nhận",
+      "returnRequested": "Đã yêu cầu trả hàng",
+      "damagedItemReceived": "Hàng bị lỗi đã nhận",
+      "damagedItemsReturned": "{{quantity}}x hàng bị lỗi đã trả lại",
+      "activeChangeError": "Đang có một thay đổi đang xử lý trên đơn này. Hãy hoàn tất hoặc hủy bỏ nó trước.",
+      "cancel": {
+        "title": "Hủy trả hàng",
+        "description": "Bạn có chắc muốn hủy yêu cầu trả hàng?"
+      },
+      "placeholders": {
+        "noReturnShippingOptions": {
+          "title": "Không tìm thấy tùy chọn vận chuyển trả hàng",
+          "hint": "Chưa có tùy chọn nào. Tạo mới tại <LinkComponent>Vị trí & Vận chuyển</LinkComponent>."
+        },
+        "outboundShippingOptions": {
+          "title": "Không tìm thấy tùy chọn vận chuyển đi",
+          "hint": "Chưa có tùy chọn nào. Tạo mới tại <LinkComponent>Vị trí & Vận chuyển</LinkComponent>."
+        }
+      },
+      "receive": {
+        "action": "Nhận hàng",
+        "receiveItems": "{{ returnType }} {{ id }}",
+        "restockAll": "Nhập lại tất cả hàng",
+        "itemsLabel": "Mặt hàng đã nhận",
+        "title": "Nhận hàng cho #{{returnId}}",
+        "sendNotificationHint": "Thông báo cho khách là đã nhận hàng.",
+        "inventoryWarning": "Lưu ý: chúng tôi sẽ tự động điều chỉnh mức tồn kho dựa trên đầu vào của bạn.",
+        "writeOffInputLabel": "Có bao nhiêu mặt hàng bị hư hỏng?",
+        "toast": {
+          "success": "Đã nhận hàng trả lại thành công.",
+          "errorLargeValue": "Số lượng lớn hơn số lượng yêu cầu.",
+          "errorNegativeValue": "Số lượng không thể là số âm.",
+          "errorLargeDamagedValue": "Tổng số hàng hỏng + hàng nhận vượt quá số lượng trên đơn."
+        }
+      },
+      "toast": {
+        "canceledSuccessfully": "Hủy trả hàng thành công",
+        "confirmedSuccessfully": "Xác nhận trả hàng thành công"
+      },
+      "panel": {
+        "title": "Đã khởi tạo trả hàng",
+        "description": "Có một yêu cầu trả hàng đang mở cần được hoàn thành"
+      }
+    },
+    "claims": {
+      "create": "Tạo khiếu nại",
+      "confirm": "Xác nhận khiếu nại",
+      "confirmText": "Bạn sắp xác nhận Khiếu nại. Không thể hoàn tác.",
+      "manage": "Quản lý Khiếu nại",
+      "outbound": "Hàng gửi đi",
+      "outboundItemAdded": "{{itemsCount}}x được thêm qua khiếu nại",
+      "outboundTotal": "Tổng hàng đi",
+      "outboundShipping": "Vận chuyển đi",
+      "outboundShippingHint": "Chọn phương thức vận chuyển.",
+      "refundAmount": "Ước tính chênh lệch",
+      "activeChangeError": "Có một thay đổi đang xử lý. Hoàn tất hoặc hủy nó trước.",
+      "actions": {
+        "cancelClaim": {
+          "successToast": "Đã hủy khiếu nại thành công."
+        }
+      },
+      "cancel": {
+        "title": "Hủy khiếu nại",
+        "description": "Bạn có chắc chắn muốn hủy khiếu nại không?"
+      },
+      "tooltips": {
+        "onlyReturnShippingOptions": "Danh sách này sẽ chỉ bao gồm các tùy chọn vận chuyển trả hàng."
+      },
+      "toast": {
+        "canceledSuccessfully": "Hủy khiếu nại thành công",
+        "confirmedSuccessfully": "Xác nhận khiếu nại thành công"
+      },
+      "panel": {
+        "title": "Khiếu nại đã khởi tạo",
+        "description": "Có một yêu cầu khiếu nại đang mở cần xử lý"
+      }
+    },
+    "exchanges": {
+      "create": "Tạo đổi hàng",
+      "manage": "Quản lý đổi hàng",
+      "confirm": "Xác nhận đổi hàng",
+      "confirmText": "Bạn sắp xác nhận Đổi hàng. Hành động này không thể hoàn tác.",
+      "outbound": "Hàng gửi đi",
+      "outboundItemAdded": "{{itemsCount}}x được thêm qua đổi hàng",
+      "outboundTotal": "Tổng hàng đi",
+      "outboundShipping": "Vận chuyển đi",
+      "outboundShippingHint": "Chọn phương thức vận chuyển.",
+      "refundAmount": "Ước tính chênh lệch",
+      "carryOverPromotion": "Chuyển tiếp khuyến mãi",
+      "carryOverPromotionHint": "Áp dụng khuyến mãi của đơn hàng cho các mặt hàng đổi",
+      "carryOverPromotionTooltip": "Chỉ các loại khuyến mãi nhất định mới được chuyển tiếp.",
+      "activeChangeError": "Có một thay đổi đang xử lý. Hoàn tất hoặc hủy nó trước.",
+      "actions": {
+        "cancelExchange": {
+          "successToast": "Hủy đổi hàng thành công."
+        }
+      },
+      "cancel": {
+        "title": "Hủy đổi hàng",
+        "description": "Bạn có chắc chắn muốn hủy yêu cầu đổi hàng không?"
+      },
+      "tooltips": {
+        "onlyReturnShippingOptions": "Danh sách này sẽ chỉ bao gồm các tùy chọn trả hàng."
+      },
+      "toast": {
+        "canceledSuccessfully": "Hủy đổi hàng thành công",
+        "confirmedSuccessfully": "Xác nhận đổi hàng thành công"
+      },
+      "panel": {
+        "title": "Đổi hàng đã khởi tạo",
+        "description": "Có một yêu cầu đổi hàng đang mở cần xử lý"
+      }
+    },
+    "reservations": {
+      "allocatedLabel": "Đã phân bổ",
+      "notAllocatedLabel": "Chưa phân bổ"
+    },
+    "allocateItems": {
+      "action": "Phân bổ mặt hàng",
+      "title": "Phân bổ mặt hàng của đơn hàng",
+      "locationDescription": "Chọn vị trí bạn muốn xuất hàng.",
+      "itemsToAllocate": "Mặt hàng cần phân bổ",
+      "itemsToAllocateDesc": "Chọn số lượng mặt hàng bạn muốn phân bổ",
+      "search": "Tìm kiếm mặt hàng",
+      "consistsOf": "Bao gồm {{num}}x mặt hàng kho",
+      "requires": "Yêu cầu {{num}} cho mỗi biến thể",
+      "toast": {
+        "created": "Phân bổ mặt hàng thành công",
+        "error": "Không thể phân bổ các mặt hàng sau: {{items}}"
+      },
+      "error": {
+        "quantityNotAllocated": "Có các mặt hàng chưa được phân bổ."
+      }
+    },
+    "shipment": {
+      "title": "Đánh dấu giao hàng đã gửi",
+      "trackingNumber": "Mã vận đơn",
+      "trackingUrl": "Link theo dõi",
+      "labelUrl": "Link nhãn",
+      "addTracking": "Thêm mã vận đơn",
+      "sendNotification": "Gửi thông báo",
+      "sendNotificationHint": "Thông báo cho khách hàng về chuyến hàng này.",
+      "toastCreated": "Tạo chuyến hàng thành công."
+    },
+    "fulfillment": {
+      "cancelWarning": "Bạn sắp hủy một lần giao hàng. Hành động này không thể hoàn tác.",
+      "markAsDeliveredWarning": "Bạn sắp đánh dấu đơn hàng là Đã giao. Không thể hoàn tác.",
+      "differentOptionSelected": "Tùy chọn vận chuyển được chọn khác với tùy chọn của khách hàng.",
+      "disabledItemTooltip": "Tùy chọn vận chuyển không cho phép giao mặt hàng này",
+      "unfulfilledItems": "Mặt hàng chưa giao",
+      "statusLabel": "Trạng thái giao hàng",
+      "statusTitle": "Trạng thái giao hàng",
+      "fulfillItems": "Giao mặt hàng",
+      "awaitingFulfillmentBadge": "Đang chờ giao hàng",
+      "requiresShipping": "Yêu cầu vận chuyển",
+      "number": "Giao hàng #{{number}}",
+      "itemsToFulfill": "Mặt hàng cần giao",
+      "create": "Tạo phiếu giao hàng",
+      "available": "Có sẵn",
+      "inStock": "Tồn kho",
+      "markAsShipped": "Đánh dấu đã gửi",
+      "markAsPickedUp": "Đánh dấu đã lấy hàng",
+      "markAsDelivered": "Đánh dấu đã giao",
+      "itemsToFulfillDesc": "Chọn mặt hàng và số lượng để giao",
+      "locationDescription": "Chọn vị trí lấy hàng để giao.",
+      "sendNotificationHint": "Thông báo cho khách hàng về việc giao hàng.",
+      "methodDescription": "Chọn một phương thức vận chuyển khác với lựa chọn của khách",
+      "error": {
+        "wrongQuantity": "Chỉ có một mặt hàng có sẵn để giao",
+        "wrongQuantity_other": "Số lượng phải là một số từ 1 đến {{number}}",
+        "noItems": "Không có mặt hàng nào để giao.",
+        "noShippingOption": "Yêu cầu tùy chọn vận chuyển",
+        "noLocation": "Yêu cầu vị trí"
+      },
+      "status": {
+        "notFulfilled": "Chưa giao",
+        "partiallyFulfilled": "Giao 1 phần",
+        "fulfilled": "Đã giao",
+        "partiallyShipped": "Vận chuyển 1 phần",
+        "shipped": "Đã gửi hàng",
+        "delivered": "Đã giao hàng",
+        "partiallyDelivered": "Đã giao 1 phần",
+        "partiallyReturned": "Trả hàng 1 phần",
+        "returned": "Đã trả hàng",
+        "canceled": "Đã hủy",
+        "requiresAction": "Cần xử lý"
+      },
+      "toast": {
+        "created": "Tạo phiếu giao hàng thành công",
+        "canceled": "Hủy giao hàng thành công",
+        "fulfillmentShipped": "Không thể hủy một đơn hàng đã được gửi",
+        "fulfillmentDelivered": "Đã đánh dấu giao hàng thành công",
+        "fulfillmentPickedUp": "Đã đánh dấu khách lấy hàng thành công"
+      },
+      "trackingLabel": "Theo dõi",
+      "shippingFromLabel": "Gửi từ",
+      "itemsLabel": "Mặt hàng"
+    },
+    "refund": {
+      "title": "Tạo Hoàn tiền",
+      "sendNotificationHint": "Thông báo cho khách hàng về việc hoàn tiền.",
+      "systemPayment": "Thanh toán hệ thống",
+      "systemPaymentDesc": "Một hoặc nhiều khoản thanh toán là thanh toán hệ thống. Lưu ý, Medusa không xử lý thu tiền và hoàn tiền cho các thanh toán này.",
+      "error": {
+        "amountToLarge": "Không thể hoàn số tiền lớn hơn tổng đơn hàng ban đầu.",
+        "amountNegative": "Số tiền hoàn lại phải là số dương.",
+        "reasonRequired": "Vui lòng chọn lý do hoàn tiền."
+      }
+    },
+    "customer": {
+      "contactLabel": "Liên hệ",
+      "editEmail": "Sửa email",
+      "transferOwnership": "Chuyển nhượng sở hữu",
+      "editBillingAddress": "Sửa địa chỉ thanh toán",
+      "editShippingAddress": "Sửa địa chỉ giao hàng"
+    },
+    "activity": {
+      "header": "Hoạt động",
+      "showMoreActivities_one": "Hiển thị thêm {{count}} hoạt động",
+      "showMoreActivities_other": "Hiển thị thêm {{count}} hoạt động",
+      "comment": {
+        "label": "Bình luận",
+        "placeholder": "Để lại bình luận",
+        "addButtonText": "Thêm bình luận",
+        "deleteButtonText": "Xóa bình luận"
+      },
+      "from": "Từ",
+      "to": "Tới",
+      "events": {
+        "common": {
+          "toReturn": "Để trả lại",
+          "toSend": "Để gửi đi"
+        },
+        "placed": {
+          "title": "Đơn hàng đã đặt",
+          "fromSalesChannel": "từ {{salesChannel}}"
+        },
+        "canceled": {
+          "title": "Đơn hàng đã hủy"
+        },
+        "payment": {
+          "awaiting": "Đang chờ thanh toán",
+          "captured": "Đã thu tiền thanh toán",
+          "canceled": "Thanh toán bị hủy",
+          "refunded": "Thanh toán đã hoàn"
+        },
+        "fulfillment": {
+          "created": "Các mặt hàng đã giao",
+          "canceled": "Giao hàng bị hủy",
+          "shipped": "Hàng đã gửi đi",
+          "delivered": "Hàng đã giao thành công",
+          "items_one": "{{count}} mặt hàng",
+          "items_other": "{{count}} mặt hàng"
+        },
+        "return": {
+          "created": "Đã yêu cầu trả hàng #{{returnId}}",
+          "canceled": "Đã hủy trả hàng #{{returnId}}",
+          "received": "Đã nhận hàng trả #{{returnId}}",
+          "items_one": "{{count}} mặt hàng đã trả",
+          "items_other": "{{count}} mặt hàng đã trả"
+        },
+        "note": {
+          "comment": "Bình luận",
+          "byLine": "bởi {{author}}"
+        },
+        "claim": {
+          "created": "Đã yêu cầu khiếu nại #{{claimId}}",
+          "canceled": "Đã hủy khiếu nại #{{claimId}}",
+          "itemsInbound": "{{count}} mặt hàng trả về",
+          "itemsOutbound": "{{count}} mặt hàng gửi đi"
+        },
+        "exchange": {
+          "created": "Đã yêu cầu đổi hàng #{{exchangeId}}",
+          "canceled": "Đã hủy đổi hàng #{{exchangeId}}",
+          "itemsInbound": "{{count}} mặt hàng trả về",
+          "itemsOutbound": "{{count}} mặt hàng gửi đi"
+        },
+        "edit": {
+          "requested": "Yêu cầu sửa đơn #{{editId}}",
+          "confirmed": "Xác nhận sửa đơn #{{editId}}"
+        },
+        "transfer": {
+          "requested": "Yêu cầu chuyển đơn #{{transferId}}",
+          "confirmed": "Xác nhận chuyển đơn #{{transferId}}",
+          "declined": "Từ chối chuyển đơn #{{transferId}}"
+        },
+        "update_order": {
+          "shipping_address": "Cập nhật địa chỉ giao hàng",
+          "billing_address": "Cập nhật địa chỉ thanh toán",
+          "email": "Cập nhật email"
+        }
+      }
+    },
+    "fields": {
+      "displayId": "ID hiển thị",
+      "refundableAmount": "Số tiền có thể hoàn",
+      "returnableQuantity": "Số lượng có thể trả"
+    }
+  },
+  "draftOrders": {
+    "domain": "Đơn hàng nháp",
+    "deleteWarning": "Bạn chuẩn bị xóa đơn hàng nháp {{id}}. Hành động này không thể hoàn tác.",
+    "paymentLinkLabel": "Link thanh toán",
+    "cartIdLabel": "ID Giỏ hàng",
+    "markAsPaid": {
+      "label": "Đánh dấu đã thanh toán",
+      "warningTitle": "Đánh dấu đã thanh toán",
+      "warningDescription": "Bạn chuẩn bị đánh dấu đơn hàng nháp là đã thanh toán. Hành động này không thể hoàn tác và sẽ không thể thu tiền sau này."
+    },
+    "status": {
+      "open": "Đang mở",
+      "completed": "Đã hoàn thành"
+    },
+    "create": {
+      "createDraftOrder": "Tạo đơn hàng nháp",
+      "createDraftOrderHint": "Tạo một đơn hàng nháp mới để quản lý chi tiết đơn hàng trước khi nó được đặt thức.",
+      "chooseRegionHint": "Chọn khu vực",
+      "existingItemsLabel": "Mặt hàng có sẵn",
+      "existingItemsHint": "Thêm sản phẩm có sẵn vào đơn hàng nháp.",
+      "customItemsLabel": "Mặt hàng tùy chỉnh",
+      "customItemsHint": "Thêm mặt hàng tùy chỉnh vào đơn.",
+      "addExistingItemsAction": "Thêm mặt hàng có sẵn",
+      "addCustomItemAction": "Thêm mặt hàng tùy chỉnh",
+      "noCustomItemsAddedLabel": "Chưa có mặt hàng tùy chỉnh nào được thêm",
+      "noExistingItemsAddedLabel": "Chưa có mặt hàng có sẵn nào được thêm",
+      "chooseRegionTooltip": "Vui lòng chọn khu vực trước",
+      "useExistingCustomerLabel": "Sử dụng khách hàng hiện tại",
+      "addShippingMethodsAction": "Thêm phương thức vận chuyển",
+      "unitPriceOverrideLabel": "Ghi đè đơn giá",
+      "shippingOptionLabel": "Tùy chọn vận chuyển",
+      "shippingOptionHint": "Chọn tùy chọn vận chuyển cho đơn hàng nháp.",
+      "shippingPriceOverrideLabel": "Ghi đè giá vận chuyển",
+      "shippingPriceOverrideHint": "Ghi đè giá vận chuyển cho đơn.",
+      "sendNotificationLabel": "Gửi thông báo",
+      "sendNotificationHint": "Gửi thông báo cho khách khi đơn hàng nháp được tạo."
+    },
+    "list": {
+      "noRecordsMessage": "Không tìm thấy đơn hàng nháp",
+      "description": "Tạo một đơn hàng nháp mới để bắt đầu.",
+      "filtered": {
+        "heading": "Không tìm thấy kết quả",
+        "description": "Không có đơn hàng nháp nào khớp với tiêu chí lọc."
+      }
+    },
+    "validation": {
+      "requiredEmailOrCustomer": "Yêu cầu Email hoặc khách hàng.",
+      "requiredItems": "Yêu cầu ít nhất một mặt hàng.",
+      "invalidEmail": "Email phải là một địa chỉ hợp lệ."
+    }
+  },
+  "stockLocations": {
+    "domain": "Vị trí & Vận chuyển",
+    "list": {
+      "description": "Quản lý vị trí kho hàng và tùy chọn vận chuyển của cửa hàng.",
+      "noRecordsMessage": "Không có dữ liệu",
+      "noRecordsMessageEmpty": "Không tìm thấy vị trí",
+      "noRecordsMessageFiltered": "Không tìm thấy vị trí nào khớp với bộ lọc"
+    },
+    "create": {
+      "header": "Tạo Vị trí Kho",
+      "hint": "Vị trí kho là nơi lưu trữ và xuất hàng hóa vật lý.",
+      "successToast": "Vị trí {{name}} đã được tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Vị trí Kho",
+      "viewInventory": "Xem tồn kho",
+      "successToast": "Vị trí {{name}} đã được cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa vị trí kho \"{{name}}\". Hành động này không thể hoàn tác.",
+      "successToast": "Vị trí \"{{name}}\" đã bị xóa thành công."
+    },
+    "fulfillmentProviders": {
+      "header": "Nhà cung cấp Vận chuyển",
+      "shippingOptionsTooltip": "Danh sách này chỉ bao gồm các nhà cung cấp được bật cho vị trí này.",
+      "label": "Nhà cung cấp đã kết nối",
+      "connectedTo": "Đã kết nối với {{count}} trên {{total}} nhà cung cấp",
+      "noProviders": "Vị trí này chưa kết nối với nhà cung cấp vận chuyển nào.",
+      "action": "Kết nối nhà cung cấp",
+      "successToast": "Đã cập nhật nhà cung cấp vận chuyển cho vị trí kho thành công."
+    },
+    "fulfillmentSets": {
+      "pickup": {
+        "header": "Lấy hàng (Pickup)"
+      },
+      "shipping": {
+        "header": "Vận chuyển (Shipping)"
+      },
+      "disable": {
+        "confirmation": "Bạn có chắc chắn muốn tắt \"{{name}}\" không? Thao tác này sẽ xóa tất cả khu vực dịch vụ và tùy chọn vận chuyển liên quan.",
+        "pickup": "Tùy chọn lấy hàng đã bị tắt thành công.",
+        "shipping": "Vận chuyển đã bị tắt thành công."
+      },
+      "enable": {
+        "pickup": "Tùy chọn lấy hàng đã được bật thành công.",
+        "shipping": "Vận chuyển đã được bật thành công."
+      }
+    },
+    "sidebar": {
+      "header": "Cấu hình Vận chuyển",
+      "shippingProfiles": {
+        "label": "Hồ sơ vận chuyển",
+        "description": "Nhóm sản phẩm theo yêu cầu vận chuyển"
+      },
+      "shippingOptionTypes": {
+        "label": "Loại tùy chọn vận chuyển",
+        "description": "Nhóm tùy chọn vận chuyển theo loại"
+      }
+    },
+    "salesChannels": {
+      "header": "Kênh bán hàng",
+      "hint": "Quản lý các kênh bán hàng được kết nối với vị trí này.",
+      "label": "Các kênh bán hàng đã kết nối",
+      "connectedTo": "Đã kết nối với {{count}} trên {{total}} kênh bán hàng",
+      "noChannels": "Vị trí này chưa kết nối với kênh bán hàng nào.",
+      "action": "Kết nối kênh bán hàng",
+      "successToast": "Kênh bán hàng đã được cập nhật thành công."
+    },
+    "pickupOptions": {
+      "edit": {
+        "header": "Sửa Tùy chọn Lấy hàng"
+      }
+    },
+    "shippingOptions": {
+      "create": {
+        "shipping": {
+          "header": "Tạo Tùy chọn Vận chuyển cho {{zone}}",
+          "hint": "Tạo tùy chọn vận chuyển mới để xác định cách gửi hàng từ vị trí này.",
+          "label": "Tùy chọn vận chuyển",
+          "successToast": "Tùy chọn vận chuyển {{name}} đã tạo thành công."
+        },
+        "pickup": {
+          "header": "Tạo Tùy chọn Lấy hàng cho {{zone}}",
+          "hint": "Tạo tùy chọn lấy hàng mới để xác định cách khách lấy hàng từ vị trí này.",
+          "label": "Tùy chọn lấy hàng",
+          "successToast": "Tùy chọn lấy hàng {{name}} đã tạo thành công."
+        },
+        "returns": {
+          "header": "Tạo Tùy chọn Trả hàng cho {{zone}}",
+          "hint": "Tạo tùy chọn trả hàng mới để xác định cách khách trả hàng về vị trí này.",
+          "label": "Tùy chọn trả hàng",
+          "successToast": "Tùy chọn trả hàng {{name}} đã tạo thành công."
+        },
+        "tabs": {
+          "details": "Chi tiết",
+          "prices": "Giá"
+        },
+        "action": "Tạo tùy chọn"
+      },
+      "delete": {
+        "confirmation": "Bạn chuẩn bị xóa tùy chọn vận chuyển \"{{name}}\". Không thể hoàn tác.",
+        "successToast": "Tùy chọn vận chuyển {{name}} đã bị xóa."
+      },
+      "edit": {
+        "header": "Sửa Tùy chọn Vận chuyển",
+        "action": "Sửa tùy chọn",
+        "successToast": "Tùy chọn vận chuyển {{name}} đã cập nhật thành công."
+      },
+      "pricing": {
+        "action": "Sửa giá"
+      },
+      "conditionalPrices": {
+        "header": "Giá có điều kiện cho {{name}}",
+        "description": "Quản lý giá có điều kiện dựa trên tổng số mặt hàng trong giỏ.",
+        "attributes": {
+          "cartItemTotal": "Tổng mặt hàng giỏ"
+        },
+        "summaries": {
+          "range": "Nếu <0>{{attribute}}</0> nằm giữa <1>{{gte}}</1> và <2>{{lte}}</2>",
+          "greaterThan": "Nếu <0>{{attribute}}</0> ≥ <1>{{gte}}</1>",
+          "lessThan": "Nếu <0>{{attribute}}</0> ≤ <1>{{lte}}</1>"
+        },
+        "actions": {
+          "addPrice": "Thêm giá",
+          "manageConditionalPrices": "Quản lý giá có điều kiện"
+        },
+        "rules": {
+          "amount": "Giá tùy chọn vận chuyển",
+          "gte": "Tổng giỏ hàng tối thiểu",
+          "lte": "Tổng giỏ hàng tối đa"
+        },
+        "customRules": {
+          "label": "Quy tắc tùy chỉnh",
+          "tooltip": "Giá này có quy tắc không thể quản lý trên bảng điều khiển.",
+          "eq": "Tổng giỏ hàng phải bằng",
+          "gt": "Tổng giỏ hàng phải lớn hơn",
+          "lt": "Tổng giỏ hàng phải nhỏ hơn"
+        },
+        "errors": {
+          "amountRequired": "Yêu cầu giá vận chuyển",
+          "minOrMaxRequired": "Phải cung cấp ít nhất tổng tối thiểu hoặc tối đa",
+          "minGreaterThanMax": "Tổng tối thiểu phải nhỏ hơn hoặc bằng tổng tối đa",
+          "duplicateAmount": "Giá vận chuyển phải duy nhất cho mỗi điều kiện",
+          "overlappingConditions": "Các điều kiện không được trùng lặp"
+        }
+      },
+      "fields": {
+        "count": {
+          "shipping_one": "{{count}} tùy chọn vận chuyển",
+          "shipping_other": "{{count}} tùy chọn vận chuyển",
+          "pickup_one": "{{count}} tùy chọn lấy hàng",
+          "pickup_other": "{{count}} tùy chọn lấy hàng",
+          "returns_one": "{{count}} tùy chọn trả hàng",
+          "returns_other": "{{count}} tùy chọn trả hàng"
+        },
+        "priceType": {
+          "label": "Loại giá",
+          "options": {
+            "fixed": {
+              "label": "Cố định",
+              "hint": "Giá cố định và không thay đổi theo nội dung đơn."
+            },
+            "calculated": {
+              "label": "Được tính toán",
+              "hint": "Giá được tính bởi nhà cung cấp vận chuyển lúc thanh toán."
+            }
+          }
+        },
+        "enableInStore": {
+          "label": "Bật trong cửa hàng",
+          "hint": "Khách hàng có thể sử dụng tùy chọn này khi thanh toán."
+        },
+        "provider": "Nhà cung cấp vận chuyển",
+        "profile": "Hồ sơ vận chuyển",
+        "type": "Loại tùy chọn vận chuyển",
+        "fulfillmentOption": "Tùy chọn xử lý đơn"
+      }
+    },
+    "serviceZones": {
+      "create": {
+        "headerPickup": "Tạo Khu vực lấy hàng cho {{location}}",
+        "headerShipping": "Tạo Khu vực vận chuyển cho {{location}}",
+        "action": "Tạo khu vực dịch vụ",
+        "successToast": "Khu vực dịch vụ {{name}} đã tạo thành công."
+      },
+      "edit": {
+        "header": "Sửa Khu vực dịch vụ",
+        "successToast": "Khu vực dịch vụ {{name}} đã cập nhật thành công."
+      },
+      "delete": {
+        "confirmation": "Bạn chuẩn bị xóa khu vực dịch vụ \"{{name}}\". Không thể hoàn tác.",
+        "successToast": "Khu vực dịch vụ {{name}} đã xóa thành công."
+      },
+      "manageAreas": {
+        "header": "Quản lý khu vực cho {{name}}",
+        "action": "Quản lý khu vực",
+        "label": "Khu vực",
+        "hint": "Chọn các khu vực địa lý mà dịch vụ bao phủ.",
+        "successToast": "Khu vực của {{name}} đã cập nhật thành công."
+      },
+      "fields": {
+        "noRecords": "Không có khu vực dịch vụ nào để thêm tùy chọn vận chuyển.",
+        "tip": "Khu vực dịch vụ dùng để giới hạn các tùy chọn vận chuyển cho một tập hợp vị trí nhất định."
+      }
+    }
+  },
+  "shippingProfile": {
+    "domain": "Hồ sơ vận chuyển",
+    "subtitle": "Nhóm sản phẩm có yêu cầu vận chuyển tương tự thành hồ sơ.",
+    "create": {
+      "header": "Tạo Hồ sơ vận chuyển",
+      "hint": "Tạo hồ sơ vận chuyển mới để nhóm sản phẩm.",
+      "successToast": "Hồ sơ vận chuyển {{name}} đã tạo thành công."
+    },
+    "delete": {
+      "title": "Xóa Hồ sơ vận chuyển",
+      "description": "Bạn chuẩn bị xóa hồ sơ vận chuyển {{name}}. Không thể hoàn tác.",
+      "successToast": "Hồ sơ vận chuyển {{name}} đã bị xóa."
+    },
+    "tooltip": {
+      "type": "Nhập loại hồ sơ vận chuyển, ví dụ: Hàng nặng, Quá khổ, Chỉ vận chuyển đường bộ..."
+    }
+  },
+  "taxRegions": {
+    "domain": "Khu vực thuế",
+    "list": {
+      "hint": "Quản lý mức thuế bạn tính cho khách hàng ở các quốc gia và khu vực khác nhau."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa khu vực thuế. Không thể hoàn tác.",
+      "successToast": "Khu vực thuế đã bị xóa thành công."
+    },
+    "create": {
+      "header": "Tạo Khu vực thuế",
+      "hint": "Tạo khu vực thuế mới để xác định mức thuế cho một quốc gia cụ thể.",
+      "errors": {
+        "missingProvider": "Yêu cầu phải có nhà cung cấp thuế.",
+        "missingCountry": "Yêu cầu chọn quốc gia."
+      },
+      "successToast": "Khu vực thuế đã được tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Khu vực thuế",
+      "hint": "Chỉnh sửa chi tiết khu vực thuế.",
+      "successToast": "Khu vực thuế đã được cập nhật thành công."
+    },
+    "province": {
+      "header": "Tỉnh/Thành phố",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Tỉnh",
+        "hint": "Tạo khu vực thuế mới cho một Tỉnh/Thành phố cụ thể."
+      }
+    },
+    "provider": {
+      "header": "Nhà cung cấp thuế"
+    },
+    "state": {
+      "header": "Tiểu bang",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Bang",
+        "hint": "Tạo khu vực thuế mới cho một tiểu bang cụ thể."
+      }
+    },
+    "stateOrTerritory": {
+      "header": "Tiểu bang hoặc Vùng lãnh thổ",
+      "create": {
+        "header": "Tạo Khu vực thuế Tiểu bang/Vùng",
+        "hint": "Tạo khu vực thuế mới cho tiểu bang/vùng cụ thể."
+      }
+    },
+    "county": {
+      "header": "Quận/Huyện",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Quận",
+        "hint": "Tạo khu vực thuế mới cho một quận cụ thể."
+      }
+    },
+    "region": {
+      "header": "Khu vực",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Khu vực",
+        "hint": "Tạo khu vực thuế mới cho một khu vực cụ thể."
+      }
+    },
+    "department": {
+      "header": "Bộ phận",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Bộ phận",
+        "hint": "Tạo khu vực thuế mới cho một bộ phận."
+      }
+    },
+    "territory": {
+      "header": "Vùng lãnh thổ",
+      "create": {
+        "header": "Tạo Khu vực thuế Vùng",
+        "hint": "Tạo khu vực thuế mới cho một vùng lãnh thổ."
+      }
+    },
+    "prefecture": {
+      "header": "Tỉnh/Quận",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Tỉnh/Quận",
+        "hint": "Tạo khu vực thuế mới cho Tỉnh/Quận."
+      }
+    },
+    "district": {
+      "header": "Quận/Huyện",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Huyện",
+        "hint": "Tạo khu vực thuế mới cho Quận/Huyện."
+      }
+    },
+    "governorate": {
+      "header": "Tỉnh trưởng",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Tỉnh trưởng",
+        "hint": "Tạo khu vực thuế mới."
+      }
+    },
+    "canton": {
+      "header": "Tổng (Canton)",
+      "create": {
+        "header": "Tạo Khu vực thuế cấp Tổng",
+        "hint": "Tạo khu vực thuế mới."
+      }
+    },
+    "emirate": {
+      "header": "Tiểu vương quốc",
+      "create": {
+        "header": "Tạo Khu vực thuế Tiểu vương quốc",
+        "hint": "Tạo khu vực thuế mới."
+      }
+    },
+    "sublevel": {
+      "header": "Cấp phụ",
+      "create": {
+        "header": "Tạo Khu vực thuế Cấp phụ",
+        "hint": "Tạo khu vực thuế mới cho cấp phụ."
+      }
+    },
+    "taxOverrides": {
+      "header": "Ghi đè",
+      "create": {
+        "header": "Tạo Ghi đè",
+        "hint": "Tạo mức thuế ghi đè mức mặc định cho các điều kiện cụ thể."
+      },
+      "edit": {
+        "header": "Sửa Ghi đè",
+        "hint": "Sửa mức thuế ghi đè."
+      }
+    },
+    "taxRates": {
+      "create": {
+        "header": "Tạo Mức thuế",
+        "hint": "Tạo mức thuế mới cho khu vực.",
+        "successToast": "Mức thuế đã tạo thành công."
+      },
+      "edit": {
+        "header": "Sửa Mức thuế",
+        "hint": "Sửa mức thuế cho khu vực.",
+        "successToast": "Mức thuế đã cập nhật thành công."
+      },
+      "delete": {
+        "confirmation": "Bạn chuẩn bị xóa mức thuế \"{{name}}\". Không thể hoàn tác.",
+        "successToast": "Mức thuế đã bị xóa."
+      }
+    },
+    "fields": {
+      "isCombinable": {
+        "label": "Có thể kết hợp",
+        "hint": "Mức thuế này có thể kết hợp với mức mặc định của khu vực thuế không.",
+        "true": "Có thể kết hợp",
+        "false": "Không thể kết hợp"
+      },
+      "defaultTaxRate": {
+        "label": "Mức thuế mặc định",
+        "tooltip": "Mức thuế mặc định cho khu vực này (VD: VAT chuẩn).",
+        "action": "Tạo mức thuế mặc định"
+      },
+      "taxRate": "Mức thuế",
+      "taxCode": "Mã thuế",
+      "taxProvider": "Nhà cung cấp thuế",
+      "targets": {
+        "label": "Mục tiêu áp dụng",
+        "hint": "Chọn mục tiêu áp dụng mức thuế này.",
+        "options": {
+          "product": "Sản phẩm",
+          "productCollection": "Bộ sưu tập sản phẩm",
+          "productTag": "Thẻ sản phẩm",
+          "productType": "Loại sản phẩm",
+          "customerGroup": "Nhóm khách hàng",
+          "shippingOption": "Tùy chọn vận chuyển"
+        },
+        "operators": {
+          "in": "trong",
+          "on": "trên",
+          "and": "và"
+        },
+        "placeholders": {
+          "product": "Tìm kiếm sản phẩm",
+          "productCollection": "Tìm kiếm bộ sưu tập",
+          "productTag": "Tìm thẻ sản phẩm",
+          "productType": "Tìm loại sản phẩm",
+          "customerGroup": "Tìm nhóm khách hàng",
+          "shippingOption": "Tìm tùy chọn vận chuyển"
+        },
+        "tags": {
+          "product": "Sản phẩm",
+          "productCollection": "Bộ sưu tập",
+          "productTag": "Thẻ",
+          "productType": "Loại",
+          "customerGroup": "Nhóm KH",
+          "shippingOption": "Vận chuyển"
+        },
+        "modal": {
+          "header": "Thêm mục tiêu"
+        },
+        "values_one": "{{count}} giá trị",
+        "values_other": "{{count}} giá trị",
+        "numberOfTargets_one": "{{count}} mục tiêu",
+        "numberOfTargets_other": "{{count}} mục tiêu",
+        "additionalValues_one": "và thêm {{count}} giá trị nữa",
+        "additionalValues_other": "và thêm {{count}} giá trị nữa",
+        "action": "Thêm mục tiêu"
+      },
+      "sublevels": {
+        "labels": {
+          "province": "Tỉnh",
+          "state": "Tiểu bang",
+          "region": "Khu vực",
+          "stateOrTerritory": "Bang/Lãnh thổ",
+          "department": "Bộ phận",
+          "county": "Quận",
+          "territory": "Lãnh thổ",
+          "prefecture": "Tỉnh/Quận",
+          "district": "Huyện",
+          "governorate": "Tỉnh trưởng",
+          "emirate": "Tiểu vương quốc",
+          "canton": "Tổng",
+          "sublevel": "Mã cấp phụ"
+        },
+        "placeholders": {
+          "province": "Chọn tỉnh",
+          "state": "Chọn bang",
+          "region": "Chọn khu vực",
+          "stateOrTerritory": "Chọn bang/lãnh thổ",
+          "department": "Chọn bộ phận",
+          "county": "Chọn quận",
+          "territory": "Chọn lãnh thổ",
+          "prefecture": "Chọn tỉnh/quận",
+          "district": "Chọn huyện",
+          "governorate": "Chọn tỉnh trưởng",
+          "emirate": "Chọn tiểu vương quốc",
+          "canton": "Chọn tổng"
+        },
+        "tooltips": {
+          "sublevel": "Nhập mã ISO 3166-2 cho khu vực thuế cấp phụ.",
+          "notPartOfCountry": "{{province}} dường như không thuộc {{country}}. Vui lòng kiểm tra lại."
+        },
+        "alert": {
+          "header": "Khu vực cấp phụ bị tắt",
+          "description": "Khu vực cấp phụ bị tắt theo mặc định. Bạn có thể bật chúng để tạo cấp Tỉnh/Bang.",
+          "action": "Bật khu vực cấp phụ"
+        }
+      },
+      "noDefaultRate": {
+        "label": "Không có mức mặc định",
+        "tooltip": "Khu vực này chưa có thuế mặc định. Vui lòng thêm VAT nếu có."
+      }
+    }
+  },
+  "promotions": {
+    "domain": "Khuyến mãi",
+    "sections": {
+      "details": "Chi tiết Khuyến mãi"
+    },
+    "tabs": {
+      "template": "Loại",
+      "details": "Chi tiết",
+      "campaign": "Chiến dịch"
+    },
+    "fields": {
+      "type": "Loại",
+      "value_type": "Loại giá trị",
+      "value": "Giá trị",
+      "campaign": "Chiến dịch",
+      "method": "Phương thức",
+      "allocation": "Phân bổ",
+      "allocationTooltip": "'Mỗi cái' áp dụng giới hạn số lượng cho từng mặt hàng, còn 'Một lần' áp dụng giới hạn cho toàn bộ giỏ hàng",
+      "addCondition": "Thêm điều kiện",
+      "clearAll": "Xóa tất cả",
+      "taxInclusive": "Bao gồm thuế",
+      "usageLimit": "Giới hạn sử dụng",
+      "usage": "Đã dùng",
+      "amount": {
+        "tooltip": "Chọn mã tiền tệ để có thể thiết lập số tiền"
+      },
+      "conditions": {
+        "rules": {
+          "title": "Ai có thể sử dụng mã này?",
+          "description": "Khách hàng nào được phép dùng mã khuyến mãi? Nếu để trống, tất cả khách hàng đều có thể dùng."
+        },
+        "target-rules": {
+          "order": {
+            "title": "Khuyến mãi sẽ áp dụng cho mặt hàng nào?",
+            "description": "Khuyến mãi sẽ áp dụng cho các mặt hàng khớp với điều kiện sau."
+          },
+          "shipping_methods": {
+            "title": "Khuyến mãi áp dụng cho phương thức vận chuyển nào?",
+            "description": "Khuyến mãi sẽ áp dụng cho phương thức vận chuyển khớp điều kiện sau."
+          },
+          "items": {
+            "title": "Khuyến mãi áp dụng cho mặt hàng nào?",
+            "description": "Khuyến mãi sẽ áp dụng cho mặt hàng khớp điều kiện sau."
+          }
+        },
+        "buy-rules": {
+          "title": "Giỏ hàng cần có gì để mở khóa khuyến mãi?",
+          "description": "Nếu các điều kiện này khớp, khuyến mãi sẽ kích hoạt trên mặt hàng mục tiêu."
+        }
+      }
+    },
+    "tooltips": {
+      "campaignType": "Phải chọn mã tiền tệ trong khuyến mãi để thiết lập ngân sách."
+    },
+    "errors": {
+      "requiredField": "Trường bắt buộc",
+      "promotionTabError": "Khắc phục lỗi trong tab Khuyến mãi trước khi tiếp tục"
+    },
+    "toasts": {
+      "promotionCreateSuccess": "Khuyến mãi ({{code}}) đã tạo thành công."
+    },
+    "create": {},
+    "edit": {
+      "title": "Sửa Chi tiết Khuyến mãi",
+      "rules": {
+        "title": "Sửa điều kiện sử dụng"
+      },
+      "target-rules": {
+        "title": "Sửa điều kiện mặt hàng"
+      },
+      "buy-rules": {
+        "title": "Sửa quy tắc mua hàng"
+      }
+    },
+    "campaign": {
+      "header": "Chiến dịch",
+      "edit": {
+        "header": "Sửa Chiến dịch",
+        "successToast": "Cập nhật chiến dịch của khuyến mãi thành công."
+      },
+      "actions": {
+        "goToCampaign": "Đi đến chiến dịch"
+      }
+    },
+    "campaign_currency": {
+      "tooltip": "Đây là tiền tệ của khuyến mãi. Có thể đổi trong tab Chi tiết."
+    },
+    "form": {
+      "required": "Bắt buộc",
+      "and": "VÀ",
+      "selectAttribute": "Chọn thuộc tính",
+      "campaign": {
+        "existing": {
+          "title": "Chiến dịch hiện có",
+          "description": "Thêm khuyến mãi vào chiến dịch hiện có.",
+          "placeholder": {
+            "title": "Không có chiến dịch hiện tại",
+            "desc": "Bạn có thể tạo một cái để theo dõi nhiều khuyến mãi và đặt giới hạn ngân sách."
+          }
+        },
+        "new": {
+          "title": "Chiến dịch mới",
+          "description": "Tạo một chiến dịch mới cho khuyến mãi này."
+        },
+        "none": {
+          "title": "Không có Chiến dịch",
+          "description": "Tiếp tục mà không liên kết khuyến mãi với chiến dịch nào"
+        }
+      },
+      "taxInclusive": {
+        "title": "Khuyến mãi có bao gồm thuế không?",
+        "description": "Bật trường này để áp dụng khuyến mãi sau thuế"
+      },
+      "status": {
+        "label": "Trạng thái",
+        "draft": {
+          "title": "Bản nháp",
+          "description": "Khách hàng chưa thể dùng mã này"
+        },
+        "active": {
+          "title": "Hoạt động",
+          "description": "Khách hàng có thể dùng mã này"
+        },
+        "inactive": {
+          "title": "Không hoạt động",
+          "description": "Khách hàng không thể dùng mã này nữa"
+        }
+      },
+      "method": {
+        "label": "Phương thức",
+        "code": {
+          "title": "Mã khuyến mãi",
+          "description": "Khách hàng phải nhập mã này khi thanh toán"
+        },
+        "automatic": {
+          "title": "Tự động",
+          "description": "Khách hàng sẽ thấy khuyến mãi này khi thanh toán"
+        }
+      },
+      "max_quantity": {
+        "title": "Số lượng tối đa",
+        "description": "Số lượng mặt hàng tối đa áp dụng khuyến mãi này."
+      },
+      "type": {
+        "standard": {
+          "title": "Tiêu chuẩn",
+          "description": "Khuyến mãi thông thường"
+        },
+        "buyget": {
+          "title": "Mua X tặng Y",
+          "description": "Khuyến mãi Mua X tặng Y"
+        }
+      },
+      "allocation": {
+        "each": {
+          "title": "Mỗi cái",
+          "description": "Áp dụng giá trị trên mỗi mặt hàng"
+        },
+        "across": {
+          "title": "Trên toàn bộ",
+          "description": "Áp dụng giá trị qua các mặt hàng"
+        },
+        "once": {
+          "title": "Một lần",
+          "description": "Áp dụng giá trị cho một số lượng mặt hàng giới hạn"
+        }
+      },
+      "code": {
+        "title": "Mã",
+        "description": "Mã mà khách sẽ nhập khi thanh toán."
+      },
+      "value": {
+        "title": "Giá trị Khuyến mãi",
+        "invalid": "Giá trị không hợp lệ"
+      },
+      "value_type": {
+        "fixed": {
+          "title": "Số tiền cố định",
+          "description": "Số tiền sẽ được giảm. VD: 100000"
+        },
+        "percentage": {
+          "title": "Phần trăm",
+          "description": "Phần trăm giảm giá. VD: 10%"
+        }
+      },
+      "limit": {
+        "title": "Giới hạn sử dụng",
+        "description": "Số lần tối đa khuyến mãi này có thể được dùng. Để trống nếu không giới hạn."
+      }
+    },
+    "deleteWarning": "Bạn chuẩn bị xóa khuyến mãi {{code}}. Không thể hoàn tác.",
+    "createPromotionTitle": "Tạo Khuyến mãi",
+    "type": "Loại khuyến mãi",
+    "conditions": {
+      "add": "Thêm điều kiện",
+      "list": {
+        "noRecordsMessage": "Thêm điều kiện để giới hạn mặt hàng được áp dụng khuyến mãi."
+      }
+    }
+  },
+"campaigns": {
+    "domain": "Chiến dịch",
+    "details": "Chi tiết chiến dịch",
+    "status": {
+      "active": "Hoạt động",
+      "expired": "Đã hết hạn",
+      "scheduled": "Đã lên lịch"
+    },
+    "delete": {
+      "title": "Bạn có chắc chắn không?",
+      "description": "Bạn chuẩn bị xóa chiến dịch '{{name}}'. Hành động này không thể hoàn tác.",
+      "successToast": "Chiến dịch '{{name}}' đã bị xóa thành công."
+    },
+    "edit": {
+      "header": "Sửa Chiến dịch",
+      "description": "Chỉnh sửa thông tin chi tiết của chiến dịch.",
+      "successToast": "Chiến dịch '{{name}}' đã cập nhật thành công."
+    },
+    "configuration": {
+      "header": "Cấu hình",
+      "edit": {
+        "header": "Sửa Cấu hình Chiến dịch",
+        "description": "Chỉnh sửa cấu hình của chiến dịch.",
+        "successToast": "Cấu hình chiến dịch đã cập nhật thành công."
+      }
+    },
+    "create": {
+      "title": "Tạo Chiến dịch",
+      "description": "Tạo một chiến dịch khuyến mãi.",
+      "hint": "Tạo một chiến dịch khuyến mãi.",
+      "header": "Tạo Chiến dịch",
+      "successToast": "Chiến dịch '{{name}}' đã tạo thành công."
+    },
+    "fields": {
+      "name": "Tên",
+      "identifier": "Mã định danh (Identifier)",
+      "start_date": "Ngày bắt đầu",
+      "end_date": "Ngày kết thúc",
+      "total_spend": "Ngân sách đã tiêu",
+      "total_used": "Số lượng đã dùng",
+      "totalUsedByAttribute": "Tổng đã dùng",
+      "budget_limit": "Giới hạn ngân sách",
+      "campaign_id": {
+        "hint": "Các chiến dịch bị vô hiệu hóa có ngân sách ở loại tiền tệ khác với khuyến mãi."
+      }
+    },
+    "budget": {
+      "attribute": {
+        "customer_id": "khách hàng",
+        "customer_email": "email"
+      },
+      "create": {
+        "hint": "Tạo ngân sách cho chiến dịch.",
+        "header": "Ngân sách Chiến dịch"
+      },
+      "details": "Ngân sách chiến dịch",
+      "fields": {
+        "type": "Loại",
+        "currency": "Tiền tệ",
+        "limit": "Giới hạn",
+        "used": "Đã dùng",
+        "budgetAttribute": "Giới hạn sử dụng mỗi",
+        "budgetAttributeTooltip": "Xác định số lần khuyến mãi có thể được sử dụng bởi mỗi khách hàng hoặc email.",
+        "totalUsedByAttribute": "Giới hạn ngân sách mỗi: {{attribute}}",
+        "totalUsedByAttributeCustomerId": "Giới hạn ngân sách mỗi khách hàng",
+        "totalUsedByAttributeEmail": "Giới hạn ngân sách mỗi email"
+      },
+      "type": {
+        "spend": {
+          "title": "Chi tiêu",
+          "description": "Đặt giới hạn cho tổng số tiền được giảm giá của tất cả các lần sử dụng khuyến mãi."
+        },
+        "usage": {
+          "title": "Lượt sử dụng",
+          "description": "Đặt giới hạn về số lần khuyến mãi có thể được sử dụng."
+        },
+        "useByAttribute": {
+          "title": "Sử dụng theo thuộc tính (id khách hàng, email, v.v.)",
+          "titleCustomerId": "Sử dụng mỗi khách hàng",
+          "titleEmail": "Sử dụng mỗi email",
+          "description": "Đặt giới hạn số lần khuyến mãi có thể được sử dụng bởi một giá trị thuộc tính cụ thể."
+        }
+      },
+      "edit": {
+        "header": "Sửa Ngân sách Chiến dịch"
+      }
+    },
+    "promotions": {
+      "remove": {
+        "title": "Xóa khuyến mãi khỏi chiến dịch",
+        "description": "Bạn chuẩn bị xóa {{count}} khuyến mãi khỏi chiến dịch. Hành động này không thể hoàn tác."
+      },
+      "alreadyAdded": "Khuyến mãi này đã được thêm vào chiến dịch.",
+      "alreadyAddedDiffCampaign": "Khuyến mãi này đã được thêm vào một chiến dịch khác ({{name}}).",
+      "currencyMismatch": "Tiền tệ của khuyến mãi và chiến dịch không khớp",
+      "toast": {
+        "success": "Đã thêm thành công {{count}} khuyến mãi vào chiến dịch"
+      },
+      "add": {
+        "list": {
+          "noRecordsMessage": "Vui lòng tạo một khuyến mãi trước."
+        }
+      },
+      "list": {
+        "noRecordsMessage": "Không có khuyến mãi nào trong chiến dịch này."
+      }
+    },
+    "deleteCampaignWarning": "Bạn chuẩn bị xóa chiến dịch {{name}}. Hành động này không thể hoàn tác.",
+    "totalSpend": "<0>{{amount}}</0> <1>{{currency}}</1>"
+  },
+  "priceLists": {
+    "domain": "Bảng giá",
+    "subtitle": "Tạo các đợt giảm giá hoặc ghi đè giá cho các điều kiện cụ thể.",
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa bảng giá \"{{title}}\". Hành động này không thể hoàn tác.",
+      "successToast": "Bảng giá \"{{title}}\" đã bị xóa thành công."
+    },
+    "create": {
+      "header": "Tạo Bảng giá",
+      "subheader": "Tạo một bảng giá mới để quản lý giá sản phẩm của bạn.",
+      "tabs": {
+        "details": "Chi tiết",
+        "products": "Sản phẩm",
+        "prices": "Giá"
+      },
+      "successToast": "Bảng giá {{title}} đã tạo thành công.",
+      "products": {
+        "list": {
+          "noRecordsMessage": "Vui lòng tạo một sản phẩm trước."
+        }
+      }
+    },
+    "edit": {
+      "header": "Sửa Bảng giá",
+      "successToast": "Bảng giá {{title}} đã cập nhật thành công."
+    },
+    "configuration": {
+      "header": "Cấu hình",
+      "edit": {
+        "header": "Sửa Cấu hình Bảng giá",
+        "description": "Chỉnh sửa cấu hình của bảng giá.",
+        "successToast": "Cấu hình bảng giá đã cập nhật thành công."
+      }
+    },
+    "products": {
+      "header": "Sản phẩm",
+      "actions": {
+        "addProducts": "Thêm sản phẩm",
+        "editPrices": "Sửa giá"
+      },
+      "delete": {
+        "confirmation_one": "Bạn chuẩn bị xóa giá của {{count}} sản phẩm trong bảng giá. Hành động này không thể hoàn tác.",
+        "confirmation_other": "Bạn chuẩn bị xóa giá của {{count}} sản phẩm trong bảng giá. Hành động này không thể hoàn tác.",
+        "successToast_one": "Đã xóa thành công giá của {{count}} sản phẩm.",
+        "successToast_other": "Đã xóa thành công giá của {{count}} sản phẩm."
+      },
+      "add": {
+        "successToast": "Giá đã được thêm vào bảng giá thành công."
+      },
+      "edit": {
+        "successToast": "Giá đã được cập nhật thành công."
+      }
+    },
+    "fields": {
+      "priceOverrides": {
+        "label": "Ghi đè giá",
+        "header": "Ghi đè giá"
+      },
+      "status": {
+        "label": "Trạng thái",
+        "options": {
+          "active": "Hoạt động",
+          "draft": "Bản nháp",
+          "expired": "Đã hết hạn",
+          "scheduled": "Đã lên lịch"
+        }
+      },
+      "type": {
+        "label": "Loại",
+        "hint": "Chọn loại bảng giá bạn muốn tạo.",
+        "options": {
+          "sale": {
+            "label": "Giảm giá (Sale)",
+            "description": "Giá giảm là những thay đổi giá tạm thời cho sản phẩm."
+          },
+          "override": {
+            "label": "Ghi đè (Override)",
+            "description": "Ghi đè thường được sử dụng để tạo giá riêng cho nhóm khách hàng."
+          }
+        }
+      },
+      "startsAt": {
+        "label": "Bảng giá có ngày bắt đầu?",
+        "hint": "Lên lịch để bảng giá tự động kích hoạt trong tương lai."
+      },
+      "endsAt": {
+        "label": "Bảng giá có ngày hết hạn?",
+        "hint": "Lên lịch để bảng giá tự động hết hạn trong tương lai."
+      },
+      "customerAvailability": {
+        "header": "Chọn nhóm khách hàng",
+        "label": "Tính khả dụng cho khách hàng",
+        "hint": "Chọn những nhóm khách hàng nào được áp dụng bảng giá này.",
+        "placeholder": "Tìm kiếm nhóm khách hàng",
+        "attribute": "Nhóm khách hàng"
+      }
+    }
+  },
+  "profile": {
+    "domain": "Hồ sơ",
+    "manageYourProfileDetails": "Quản lý chi tiết hồ sơ của bạn.",
+    "fields": {
+      "languageLabel": "Ngôn ngữ",
+      "usageInsightsLabel": "Thông tin sử dụng"
+    },
+    "edit": {
+      "header": "Sửa Hồ sơ",
+      "languageHint": "Ngôn ngữ bạn muốn sử dụng trong bảng điều khiển. Nó không thay đổi ngôn ngữ ngoài cửa hàng của bạn.",
+      "languagePlaceholder": "Chọn ngôn ngữ",
+      "usageInsightsHint": "Chia sẻ thông tin sử dụng giúp chúng tôi cải thiện Medusa. Bạn có thể đọc thêm về những gì chúng tôi thu thập trong <0>tài liệu</0> của chúng tôi."
+    },
+    "toast": {
+      "edit": "Đã lưu thay đổi hồ sơ"
+    }
+  },
+  "users": {
+    "domain": "Người dùng",
+    "editUser": "Sửa Người dùng",
+    "inviteUser": "Mời Người dùng",
+    "inviteUserHint": "Mời một người dùng (nhân viên) mới vào cửa hàng của bạn.",
+    "sendInvite": "Gửi lời mời",
+    "pendingInvites": "Lời mời đang chờ",
+    "deleteInviteWarning": "Bạn chuẩn bị xóa lời mời cho {{email}}. Hành động này không thể hoàn tác.",
+    "resendInvite": "Gửi lại lời mời",
+    "copyInviteLink": "Sao chép link mời",
+    "expiredOnDate": "Đã hết hạn vào {{date}}",
+    "validFromUntil": "Có hiệu lực từ <0>{{from}}</0> - <1>{{until}}</1>",
+    "acceptedOnDate": "Đã chấp nhận vào {{date}}",
+    "inviteStatus": {
+      "accepted": "Đã chấp nhận",
+      "pending": "Đang chờ",
+      "expired": "Đã hết hạn"
+    },
+    "roles": {
+      "admin": "Quản trị viên",
+      "developer": "Nhà phát triển",
+      "member": "Thành viên"
+    },
+    "list": {
+      "empty": {
+        "heading": "Không tìm thấy người dùng nào",
+        "description": "Khi một người dùng được mời và tham gia, họ sẽ xuất hiện ở đây."
+      },
+      "filtered": {
+        "heading": "Không có kết quả",
+        "description": "Không có người dùng nào khớp với bộ lọc."
+      }
+    },
+    "deleteUserWarning": "Bạn chuẩn bị xóa người dùng {{name}}. Hành động này không thể hoàn tác.",
+    "deleteUserSuccess": "Xóa người dùng {{name}} thành công",
+    "invite": "Mời"
+  },
+  "translations": {
+    "domain": "Bản dịch",
+    "settings": {
+      "header": "Quản lý thực thể có thể dịch",
+      "successToast": "Đã cập nhật cài đặt thành công"
+    },
+    "actions": {
+      "manage": "Quản lý bản dịch",
+      "manageEntities": "Quản lý thực thể",
+      "manageLocales": "Quản lý ngôn ngữ"
+    },
+    "subtitle": "Quản lý bản dịch dữ liệu của bạn trong Medusa",
+    "list": {
+      "metrics": "{{translated}} trên {{total}} bản dịch"
+    },
+    "edit": {
+      "successToast": "Bản dịch đã cập nhật thành công",
+      "unsavedChanges": {
+        "title": "Bản dịch chưa lưu",
+        "description": "Đừng để mất công sức của bạn. Bạn có những thay đổi chưa được lưu"
+      }
+    },
+    "bulk": {
+      "header": "Trình chỉnh sửa bản dịch hàng loạt",
+      "mainColumn": "Ngôn ngữ (Locale)"
+    },
+    "activeLocales": {
+      "heading": "Ngôn ngữ",
+      "subtitle": "Bản dịch đã kích hoạt",
+      "noLocalesTip": "Cấu hình ít nhất một ngôn ngữ để bắt đầu dịch dữ liệu của bạn",
+      "noLocalesTipConfigureAction": "Cấu hình"
+    },
+    "completion": {
+      "heading": "Các trường đã dịch",
+      "translated": "Đã dịch",
+      "toTranslate": "Bị thiếu",
+      "footer": "Ngôn ngữ"
+    }
+  },
+  "store": {
+    "domain": "Cửa hàng",
+    "manageYourStoresDetails": "Quản lý thông tin chi tiết cửa hàng của bạn",
+    "editStore": "Sửa cửa hàng",
+    "defaultCurrency": "Tiền tệ mặc định",
+    "defaultLocale": "Ngôn ngữ mặc định",
+    "defaultRegion": "Khu vực mặc định",
+    "defaultSalesChannel": "Kênh bán hàng mặc định",
+    "defaultLocation": "Vị trí mặc định",
+    "swapLinkTemplate": "Mẫu link đổi hàng",
+    "paymentLinkTemplate": "Mẫu link thanh toán",
+    "inviteLinkTemplate": "Mẫu link mời",
+    "locales": "Ngôn ngữ (Locales)",
+    "currencies": "Tiền tệ",
+    "addCurrencies": "Thêm tiền tệ",
+    "enableTaxInclusivePricing": "Bật giá bao gồm thuế",
+    "disableTaxInclusivePricing": "Tắt giá bao gồm thuế",
+    "removeCurrencyWarning_one": "Bạn chuẩn bị xóa {{count}} loại tiền tệ khỏi cửa hàng. Đảm bảo rằng bạn đã xóa tất cả các mức giá dùng loại tiền tệ này trước khi tiếp tục.",
+    "removeCurrencyWarning_other": "Bạn chuẩn bị xóa {{count}} loại tiền tệ khỏi cửa hàng. Đảm bảo rằng bạn đã xóa tất cả các mức giá dùng loại tiền tệ này trước khi tiếp tục.",
+    "removeLocaleWarning_one": "Bạn chuẩn bị xóa {{count}} ngôn ngữ khỏi cửa hàng. Bất kỳ bản dịch nào sử dụng ngôn ngữ này sẽ bị xóa.",
+    "removeLocaleWarning_other": "Bạn chuẩn bị xóa {{count}} ngôn ngữ khỏi cửa hàng. Bất kỳ bản dịch nào sử dụng ngôn ngữ này sẽ bị xóa.",
+    "currencyAlreadyAdded": "Loại tiền tệ này đã được thêm vào cửa hàng của bạn.",
+    "localeAlreadyAdded": "Ngôn ngữ này đã được thêm vào cửa hàng của bạn.",
+    "edit": {
+      "header": "Sửa Cửa hàng"
+    },
+    "toast": {
+      "update": "Cửa hàng đã được cập nhật thành công",
+      "currenciesUpdated": "Cập nhật tiền tệ thành công",
+      "localesUpdated": "Cập nhật ngôn ngữ thành công",
+      "currenciesRemoved": "Xóa tiền tệ khỏi cửa hàng thành công",
+      "localesRemoved": "Xóa ngôn ngữ khỏi cửa hàng thành công",
+      "updatedTaxInclusivitySuccessfully": "Cập nhật cài đặt giá bao gồm thuế thành công"
+    }
+  },
+  "regions": {
+    "domain": "Khu vực",
+    "subtitle": "Khu vực là nơi bạn bán sản phẩm. Nó có thể bao gồm nhiều quốc gia, và có các mức thuế, nhà cung cấp và tiền tệ khác nhau.",
+    "createRegion": "Tạo Khu vực",
+    "createRegionHint": "Quản lý mức thuế và nhà cung cấp cho một nhóm các quốc gia.",
+    "addCountries": "Thêm quốc gia",
+    "editRegion": "Sửa Khu vực",
+    "countriesHint": "Thêm các quốc gia có mặt trong khu vực này.",
+    "deleteRegionWarning": "Bạn chuẩn bị xóa khu vực {{name}}. Hành động này không thể hoàn tác.",
+    "removeCountriesWarning_one": "Bạn chuẩn bị xóa {{count}} quốc gia khỏi khu vực. Hành động này không thể hoàn tác.",
+    "removeCountriesWarning_other": "Bạn chuẩn bị xóa {{count}} quốc gia khỏi khu vực. Hành động này không thể hoàn tác.",
+    "removeCountryWarning": "Bạn chuẩn bị xóa quốc gia {{name}} khỏi khu vực. Hành động này không thể hoàn tác.",
+    "automaticTaxesHint": "Khi được bật, thuế sẽ chỉ được tính toán lúc thanh toán dựa trên địa chỉ giao hàng.",
+    "taxInclusiveHint": "Khi được bật, giá hiển thị ở khu vực này sẽ bao gồm cả thuế.",
+    "providersHint": "Chọn nhà cung cấp thanh toán nào có sẵn ở khu vực này.",
+    "shippingOptions": "Tùy chọn Vận chuyển",
+    "deleteShippingOptionWarning": "Bạn chuẩn bị xóa tùy chọn vận chuyển {{name}}. Hành động này không thể hoàn tác.",
+    "return": "Trả hàng",
+    "outbound": "Gửi đi",
+    "priceType": "Loại giá",
+    "flatRate": "Đồng giá",
+    "calculated": "Được tính toán",
+    "list": {
+      "noRecordsMessage": "Tạo một khu vực cho những nơi bạn bán hàng."
+    },
+    "toast": {
+      "delete": "Khu vực đã xóa thành công",
+      "edit": "Đã lưu thay đổi khu vực",
+      "create": "Khu vực đã tạo thành công",
+      "countries": "Quốc gia trong khu vực đã cập nhật thành công"
+    },
+    "shippingOption": {
+      "createShippingOption": "Tạo Tùy chọn Vận chuyển",
+      "createShippingOptionHint": "Tạo một tùy chọn vận chuyển mới cho khu vực.",
+      "editShippingOption": "Sửa Tùy chọn Vận chuyển",
+      "fulfillmentMethod": "Phương thức Xử lý đơn",
+      "type": {
+        "outbound": "Gửi đi",
+        "outboundHint": "Sử dụng tùy chọn này nếu bạn tạo phương thức để gửi sản phẩm cho khách.",
+        "return": "Trả hàng",
+        "returnHint": "Sử dụng tùy chọn này nếu bạn tạo phương thức để khách trả hàng lại cho bạn."
+      },
+      "priceType": {
+        "label": "Loại giá",
+        "flatRate": "Đồng giá",
+        "calculated": "Được tính toán"
+      },
+      "availability": {
+        "adminOnly": "Chỉ Admin",
+        "adminOnlyHint": "Khi được bật, tùy chọn này sẽ chỉ hiển thị trong bảng điều khiển quản trị, không hiện ngoài cửa hàng."
+      },
+      "taxInclusiveHint": "Khi được bật, giá của tùy chọn vận chuyển này sẽ bao gồm thuế.",
+      "requirements": {
+        "label": "Yêu cầu",
+        "hint": "Chỉ định các yêu cầu đối với tùy chọn vận chuyển này."
+      }
+    }
+  },
+"taxes": {
+    "domain": "Khu vực thuế",
+    "domainDescription": "Quản lý khu vực thuế của bạn",
+    "countries": {
+      "taxCountriesHint": "Cài đặt thuế áp dụng cho các quốc gia được liệt kê."
+    },
+    "settings": {
+      "editTaxSettings": "Sửa Cài đặt Thuế",
+      "taxProviderLabel": "Nhà cung cấp thuế",
+      "systemTaxProviderLabel": "Nhà cung cấp thuế Hệ thống",
+      "calculateTaxesAutomaticallyLabel": "Tự động tính thuế",
+      "calculateTaxesAutomaticallyHint": "Khi được bật, mức thuế sẽ tự động được tính và áp dụng cho giỏ hàng. Khi bị tắt, thuế phải được tính thủ công lúc thanh toán. Khuyên dùng tính thủ công khi sử dụng nhà cung cấp thuế bên thứ ba.",
+      "applyTaxesOnGiftCardsLabel": "Áp dụng thuế cho thẻ quà tặng",
+      "applyTaxesOnGiftCardsHint": "Khi được bật, thuế sẽ áp dụng cho thẻ quà tặng lúc thanh toán. Ở một số quốc gia, quy định thuế yêu cầu áp dụng thuế cho thẻ quà tặng khi mua.",
+      "defaultTaxRateLabel": "Mức thuế mặc định",
+      "defaultTaxCodeLabel": "Mã thuế mặc định"
+    },
+    "defaultRate": {
+      "sectionTitle": "Mức thuế mặc định"
+    },
+    "taxRate": {
+      "sectionTitle": "Các mức thuế",
+      "createTaxRate": "Tạo Mức thuế",
+      "createTaxRateHint": "Tạo một mức thuế mới cho khu vực.",
+      "deleteRateDescription": "Bạn chuẩn bị xóa mức thuế {{name}}. Hành động này không thể hoàn tác.",
+      "editRateAction": "Sửa mức thuế",
+      "editOverridesAction": "Sửa ghi đè",
+      "editOverridesTitle": "Sửa Ghi đè Mức thuế",
+      "editOverridesHint": "Chỉ định các ghi đè cho mức thuế này.",
+      "deleteTaxRateWarning": "Bạn chuẩn bị xóa mức thuế {{name}}. Hành động này không thể hoàn tác.",
+      "productOverridesLabel": "Ghi đè sản phẩm",
+      "productOverridesHint": "Chỉ định ghi đè sản phẩm cho mức thuế.",
+      "addProductOverridesAction": "Thêm ghi đè sản phẩm",
+      "productTypeOverridesLabel": "Ghi đè loại sản phẩm",
+      "productTypeOverridesHint": "Chỉ định ghi đè loại sản phẩm cho mức thuế.",
+      "addProductTypeOverridesAction": "Thêm ghi đè loại sản phẩm",
+      "shippingOptionOverridesLabel": "Ghi đè tùy chọn vận chuyển",
+      "shippingOptionOverridesHint": "Chỉ định ghi đè tùy chọn vận chuyển cho mức thuế.",
+      "addShippingOptionOverridesAction": "Thêm ghi đè tùy chọn vận chuyển",
+      "productOverridesHeader": "Sản phẩm",
+      "productTypeOverridesHeader": "Loại sản phẩm",
+      "shippingOptionOverridesHeader": "Tùy chọn vận chuyển"
+    }
+  },
+  "locations": {
+    "domain": "Vị trí",
+    "editLocation": "Sửa vị trí",
+    "addSalesChannels": "Thêm kênh bán hàng",
+    "noLocationsFound": "Không tìm thấy vị trí nào",
+    "selectLocations": "Chọn các vị trí có sẵn mặt hàng này.",
+    "deleteLocationWarning": "Bạn chuẩn bị xóa vị trí {{name}}. Hành động này không thể hoàn tác.",
+    "removeSalesChannelsWarning_one": "Bạn chuẩn bị xóa {{count}} kênh bán hàng khỏi vị trí.",
+    "removeSalesChannelsWarning_other": "Bạn chuẩn bị xóa {{count}} kênh bán hàng khỏi vị trí.",
+    "toast": {
+      "create": "Vị trí đã tạo thành công",
+      "update": "Vị trí đã cập nhật thành công",
+      "removeChannel": "Kênh bán hàng đã xóa thành công"
+    }
+  },
+  "reservations": {
+    "domain": "Đặt trước",
+    "subtitle": "Quản lý số lượng đặt trước của các mặt hàng trong kho.",
+    "deleteWarning": "Bạn chuẩn bị xóa một mục đặt trước. Hành động này không thể hoàn tác."
+  },
+  "salesChannels": {
+    "domain": "Kênh bán hàng",
+    "subtitle": "Quản lý các kênh bán hàng trực tuyến và ngoại tuyến của bạn.",
+    "list": {
+      "empty": {
+        "heading": "Không tìm thấy kênh bán hàng nào",
+        "description": "Sau khi được tạo, kênh bán hàng sẽ xuất hiện ở đây."
+      },
+      "filtered": {
+        "heading": "Không có kết quả",
+        "description": "Không có kênh bán hàng nào khớp với bộ lọc."
+      }
+    },
+    "createSalesChannel": "Tạo Kênh bán hàng",
+    "createSalesChannelHint": "Tạo một kênh bán hàng mới để bán sản phẩm của bạn.",
+    "enabledHint": "Chỉ định xem kênh bán hàng này có được bật hay không.",
+    "removeProductsWarning_one": "Bạn chuẩn bị xóa {{count}} sản phẩm khỏi {{sales_channel}}.",
+    "removeProductsWarning_other": "Bạn chuẩn bị xóa {{count}} sản phẩm khỏi {{sales_channel}}.",
+    "addProducts": "Thêm Sản phẩm",
+    "editSalesChannel": "Sửa kênh bán hàng",
+    "productAlreadyAdded": "Sản phẩm này đã được thêm vào kênh bán hàng.",
+    "deleteSalesChannelWarning": "Bạn chuẩn bị xóa kênh bán hàng {{name}}. Hành động này không thể hoàn tác.",
+    "toast": {
+      "create": "Kênh bán hàng đã tạo thành công",
+      "update": "Kênh bán hàng đã cập nhật thành công",
+      "delete": "Kênh bán hàng đã xóa thành công"
+    },
+    "tooltip": {
+      "cannotDeleteDefault": "Không thể xóa kênh bán hàng mặc định"
+    },
+    "products": {
+      "list": {
+        "noRecordsMessage": "Không có sản phẩm nào trong kênh bán hàng này."
+      },
+      "add": {
+        "list": {
+          "noRecordsMessage": "Vui lòng tạo một sản phẩm trước."
+        }
+      }
+    }
+  },
+  "apiKeyManagement": {
+    "domain": {
+      "publishable": "Khóa API Publishable",
+      "secret": "Khóa API Bí mật"
+    },
+    "subtitle": {
+      "publishable": "Quản lý các khóa API dùng trong cửa hàng để giới hạn phạm vi truy cập vào các kênh bán hàng cụ thể.",
+      "secret": "Quản lý các khóa API để xác thực người dùng admin trong ứng dụng quản trị."
+    },
+    "status": {
+      "active": "Hoạt động",
+      "revoked": "Đã thu hồi"
+    },
+    "type": {
+      "publishable": "Publishable",
+      "secret": "Bí mật"
+    },
+    "create": {
+      "createPublishableHeader": "Tạo Khóa API Publishable",
+      "createPublishableHint": "Tạo một khóa API publishable mới để giới hạn phạm vi yêu cầu cho các kênh bán hàng cụ thể.",
+      "createSecretHeader": "Tạo Khóa API Bí mật",
+      "createSecretHint": "Tạo một khóa API bí mật mới để truy cập API Medusa với tư cách người dùng quản trị được xác thực.",
+      "secretKeyCreatedHeader": "Khóa bí mật đã được tạo",
+      "secretKeyCreatedHint": "Khóa bí mật mới của bạn đã được tạo. Hãy sao chép và lưu trữ an toàn ngay bây giờ. Đây là lần duy nhất nó được hiển thị.",
+      "copySecretTokenSuccess": "Khóa bí mật đã được sao chép vào khay nhớ tạm.",
+      "copySecretTokenFailure": "Không thể sao chép khóa bí mật.",
+      "successToast": "Khóa API đã tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Khóa API",
+      "description": "Chỉnh sửa tên của khóa API.",
+      "successToast": "Khóa API {{title}} đã cập nhật thành công."
+    },
+    "salesChannels": {
+      "title": "Thêm Kênh bán hàng",
+      "description": "Thêm các kênh bán hàng mà khóa API này được phép truy cập.",
+      "successToast_one": "{{count}} kênh bán hàng đã được thêm vào khóa API.",
+      "successToast_other": "{{count}} kênh bán hàng đã được thêm vào khóa API.",
+      "alreadyAddedTooltip": "Kênh bán hàng này đã được thêm vào khóa API.",
+      "list": {
+        "noRecordsMessage": "Không có kênh bán hàng nào trong phạm vi của khóa API này."
+      }
+    },
+    "delete": {
+      "warning": "Bạn chuẩn bị xóa khóa API {{title}}. Hành động này không thể hoàn tác.",
+      "successToast": "Khóa API {{title}} đã xóa thành công."
+    },
+    "revoke": {
+      "warning": "Bạn chuẩn bị thu hồi khóa API {{title}}. Hành động này không thể hoàn tác.",
+      "successToast": "Khóa API {{title}} đã thu hồi thành công."
+    },
+    "addSalesChannels": {
+      "list": {
+        "noRecordsMessage": "Vui lòng tạo kênh bán hàng trước."
+      }
+    },
+    "removeSalesChannel": {
+      "warning": "Bạn chuẩn bị xóa kênh bán hàng {{name}} khỏi khóa API. Hành động này không thể hoàn tác.",
+      "warningBatch_one": "Bạn chuẩn bị xóa {{count}} kênh bán hàng khỏi khóa API. Hành động này không thể hoàn tác.",
+      "warningBatch_other": "Bạn chuẩn bị xóa {{count}} kênh bán hàng khỏi khóa API. Hành động này không thể hoàn tác.",
+      "successToast": "Kênh bán hàng đã bị xóa khỏi khóa API.",
+      "successToastBatch_one": "{{count}} kênh bán hàng đã bị xóa khỏi khóa API.",
+      "successToastBatch_other": "{{count}} kênh bán hàng đã bị xóa khỏi khóa API."
+    },
+    "actions": {
+      "revoke": "Thu hồi khóa API",
+      "copy": "Sao chép khóa API",
+      "copySuccessToast": "Khóa API đã được sao chép."
+    },
+    "table": {
+      "lastUsedAtHeader": "Dùng lần cuối lúc",
+      "createdAtHeader": "Thu hồi lúc"
+    },
+    "fields": {
+      "lastUsedAtLabel": "Dùng lần cuối lúc",
+      "revokedByLabel": "Thu hồi bởi",
+      "revokedAtLabel": "Thu hồi lúc",
+      "createdByLabel": "Tạo bởi"
+    }
+  },
+  "returnReasons": {
+    "domain": "Lý do trả hàng",
+    "subtitle": "Quản lý các lý do trả lại hàng.",
+    "calloutHint": "Quản lý các lý do để phân loại việc trả hàng.",
+    "editReason": "Sửa Lý do trả hàng",
+    "create": {
+      "header": "Thêm Lý do trả hàng",
+      "subtitle": "Chỉ định các lý do trả hàng phổ biến nhất.",
+      "hint": "Tạo một lý do trả hàng mới để phân loại.",
+      "successToast": "Lý do trả hàng {{label}} đã tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Lý do trả hàng",
+      "subtitle": "Chỉnh sửa giá trị của lý do trả hàng.",
+      "successToast": "Lý do trả hàng {{label}} đã cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa lý do trả hàng \"{{label}}\". Hành động này không thể hoàn tác.",
+      "successToast": "Lý do trả hàng \"{{label}}\" đã bị xóa thành công."
+    },
+    "fields": {
+      "value": {
+        "label": "Giá trị",
+        "placeholder": "sai_kich_co",
+        "tooltip": "Giá trị nên là một định danh duy nhất cho lý do trả hàng."
+      },
+      "label": {
+        "label": "Nhãn",
+        "placeholder": "Sai kích cỡ"
+      },
+      "description": {
+        "label": "Mô tả",
+        "placeholder": "Khách hàng nhận sai kích cỡ"
+      }
+    }
+  },
+  "refundReasons": {
+    "domain": "Lý do hoàn tiền",
+    "subtitle": "Quản lý các lý do phát hành hoàn tiền.",
+    "calloutHint": "Quản lý các lý do để phân loại việc hoàn tiền.",
+    "editReason": "Sửa Lý do hoàn tiền",
+    "create": {
+      "header": "Thêm Lý do hoàn tiền",
+      "subtitle": "Chỉ định các lý do hoàn tiền phổ biến nhất.",
+      "hint": "Tạo một lý do hoàn tiền mới để phân loại.",
+      "successToast": "Lý do hoàn tiền {{label}} đã tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Lý do hoàn tiền",
+      "subtitle": "Chỉnh sửa giá trị của lý do hoàn tiền.",
+      "successToast": "Lý do hoàn tiền {{label}} đã cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa lý do hoàn tiền \"{{label}}\". Hành động này không thể hoàn tác.",
+      "successToast": "Lý do hoàn tiền đã bị xóa thành công."
+    },
+    "fields": {
+      "label": {
+        "label": "Nhãn",
+        "placeholder": "Cử chỉ thiện chí"
+      },
+      "code": {
+        "label": "Mã",
+        "placeholder": "cu_chi_thien_chi"
+      },
+      "description": {
+        "label": "Mô tả",
+        "placeholder": "Khách hàng có trải nghiệm mua sắm tồi"
+      }
+    }
+  },
+  "login": {
+    "forgotPassword": "Quên mật khẩu? - <0>Đặt lại</0>",
+    "title": "ADMIN",
+    "hint": "Chào Mừng Bạn Đến Với Giao Diện Admin"
+  },
+  "invite": {
+    "title": "Chào mừng đến với Medusa",
+    "hint": "Tạo tài khoản của bạn bên dưới",
+    "backToLogin": "Quay lại đăng nhập",
+    "createAccount": "Tạo tài khoản",
+    "alreadyHaveAccount": "Đã có tài khoản? - <0>Đăng nhập</0>",
+    "emailTooltip": "Email của bạn không thể thay đổi. Nếu bạn muốn dùng email khác, một lời mời mới phải được gửi.",
+    "invalidInvite": "Lời mời không hợp lệ hoặc đã hết hạn.",
+    "successTitle": "Tài khoản của bạn đã được đăng ký",
+    "successHint": "Bắt đầu sử dụng Medusa Admin ngay lập tức.",
+    "successAction": "Bắt đầu Medusa Admin",
+    "invalidTokenTitle": "Token lời mời không hợp lệ",
+    "invalidTokenHint": "Thử yêu cầu một link mời mới.",
+    "passwordMismatch": "Mật khẩu không khớp",
+    "toast": {
+      "accepted": "Chấp nhận lời mời thành công"
+    }
+  },
+  "resetPassword": {
+    "title": "Đặt lại mật khẩu",
+    "hint": "Nhập email của bạn bên dưới, chúng tôi sẽ gửi hướng dẫn cách đặt lại mật khẩu.",
+    "email": "Email",
+    "sendResetInstructions": "Gửi hướng dẫn đặt lại",
+    "backToLogin": "<0>Quay lại đăng nhập</0>",
+    "newPasswordHint": "Chọn một mật khẩu mới bên dưới.",
+    "invalidTokenTitle": "Token đặt lại không hợp lệ",
+    "invalidTokenHint": "Thử yêu cầu một link đặt lại mới.",
+    "expiredTokenTitle": "Token đặt lại đã hết hạn",
+    "goToResetPassword": "Đi đến Đặt lại Mật khẩu",
+    "resetPassword": "Đặt lại mật khẩu",
+    "newPassword": "Mật khẩu mới",
+    "repeatNewPassword": "Nhập lại mật khẩu mới",
+    "tokenExpiresIn": "Token hết hạn trong <0>{{time}}</0> phút",
+    "successfulRequestTitle": "Gửi email thành công",
+    "successfulRequest": "Chúng tôi đã gửi email để bạn đặt lại mật khẩu. Kiểm tra thư mục spam nếu bạn không thấy sau vài phút.",
+    "successfulResetTitle": "Đặt lại mật khẩu thành công",
+    "successfulReset": "Vui lòng đăng nhập tại trang đăng nhập.",
+    "passwordMismatch": "Mật khẩu không khớp",
+    "invalidLinkTitle": "Link đặt lại không hợp lệ",
+    "invalidLinkHint": "Thử đặt lại mật khẩu của bạn một lần nữa."
+  },
+  "workflowExecutions": {
+    "domain": "Quy trình làm việc",
+    "subtitle": "Xem và theo dõi các luồng thực thi quy trình làm việc trong ứng dụng Medusa.",
+    "transactionIdLabel": "ID Giao dịch",
+    "workflowIdLabel": "ID Quy trình",
+    "progressLabel": "Tiến độ",
+    "stepsCompletedLabel_one": "Đã hoàn thành {{completed}} trên {{count}} bước",
+    "stepsCompletedLabel_other": "Đã hoàn thành {{completed}} trên {{count}} bước",
+    "list": {
+      "noRecordsMessage": "Chưa có quy trình nào được thực thi."
+    },
+    "history": {
+      "sectionTitle": "Lịch sử",
+      "runningState": "Đang chạy...",
+      "awaitingState": "Đang chờ",
+      "failedState": "Thất bại",
+      "skippedState": "Bị bỏ qua",
+      "skippedFailureState": "Bị bỏ qua (Thất bại)",
+      "definitionLabel": "Định nghĩa",
+      "outputLabel": "Đầu ra",
+      "compensateInputLabel": "Đầu vào bù đắp",
+      "revertedLabel": "Đã hoàn nguyên",
+      "errorLabel": "Lỗi"
+    },
+    "state": {
+      "done": "Hoàn tất",
+      "failed": "Thất bại",
+      "reverted": "Hoàn nguyên",
+      "invoking": "Đang gọi",
+      "compensating": "Đang bù đắp",
+      "notStarted": "Chưa bắt đầu"
+    },
+    "transaction": {
+      "state": {
+        "waitingToCompensate": "Đang chờ bù đắp"
+      }
+    },
+    "step": {
+      "state": {
+        "skipped": "Bị bỏ qua",
+        "skippedFailure": "Bị bỏ qua (Thất bại)",
+        "dormant": "Ngủ đông",
+        "timeout": "Hết thời gian"
+      }
+    }
+  },
+  "shippingOptionTypes": {
+    "domain": "Loại tùy chọn vận chuyển",
+    "subtitle": "Tổ chức tùy chọn vận chuyển thành các loại.",
+    "create": {
+      "header": "Tạo Loại tùy chọn vận chuyển",
+      "hint": "Tạo một loại tùy chọn vận chuyển mới để phân loại.",
+      "successToast": "Loại tùy chọn vận chuyển {{label}} đã tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Loại tùy chọn vận chuyển",
+      "successToast": "Loại tùy chọn vận chuyển {{label}} đã cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa loại tùy chọn vận chuyển \"{{label}}\". Hành động này không thể hoàn tác.",
+      "successToast": "Loại tùy chọn vận chuyển \"{{label}}\" đã bị xóa thành công."
+    },
+    "fields": {
+      "label": "Nhãn",
+      "code": "Mã",
+      "description": "Mô tả"
+    }
+  },
+  "productTypes": {
+    "domain": "Loại sản phẩm",
+    "subtitle": "Tổ chức sản phẩm thành các loại.",
+    "create": {
+      "header": "Tạo Loại sản phẩm",
+      "hint": "Tạo một loại sản phẩm mới để phân loại.",
+      "successToast": "Loại sản phẩm {{value}} đã tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Loại sản phẩm",
+      "successToast": "Loại sản phẩm {{value}} đã cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa loại sản phẩm \"{{value}}\". Hành động này không thể hoàn tác.",
+      "successToast": "Loại sản phẩm \"{{value}}\" đã bị xóa thành công."
+    },
+    "fields": {
+      "value": "Giá trị"
+    }
+  },
+  "productTags": {
+    "domain": "Thẻ sản phẩm (Tags)",
+    "create": {
+      "header": "Tạo Thẻ sản phẩm",
+      "subtitle": "Tạo một thẻ sản phẩm mới để phân loại.",
+      "successToast": "Thẻ sản phẩm {{value}} đã tạo thành công."
+    },
+    "edit": {
+      "header": "Sửa Thẻ sản phẩm",
+      "subtitle": "Chỉnh sửa giá trị của thẻ.",
+      "successToast": "Thẻ sản phẩm {{value}} đã cập nhật thành công."
+    },
+    "delete": {
+      "confirmation": "Bạn chuẩn bị xóa thẻ sản phẩm {{value}}. Hành động này không thể hoàn tác.",
+      "successToast": "Thẻ sản phẩm {{value}} đã bị xóa thành công."
+    },
+    "fields": {
+      "value": "Giá trị"
+    }
+  },
+  "notifications": {
+    "domain": "Thông báo",
+    "emptyState": {
+      "title": "Không có thông báo",
+      "description": "Hiện tại bạn không có thông báo nào, nhưng khi có chúng sẽ nằm ở đây."
+    },
+    "accessibility": {
+      "description": "Thông báo về các hoạt động của hệ thống sẽ được liệt kê tại đây."
+    }
+  },
+  "errors": {
+    "serverError": "Lỗi máy chủ - Hãy thử lại sau.",
+    "invalidCredentials": "Sai email hoặc mật khẩu"
+  },
+  "statuses": {
+    "scheduled": "Đã lên lịch",
+    "expired": "Đã hết hạn",
+    "active": "Hoạt động",
+    "inactive": "Không hoạt động",
+    "draft": "Bản nháp",
+    "enabled": "Đã bật",
+    "disabled": "Đã tắt"
+  },
+  "labels": {
+    "productVariant": "Biến thể sản phẩm",
+    "prices": "Giá",
+    "available": "Có sẵn",
+    "inStock": "Tồn kho",
+    "added": "Đã thêm",
+    "removed": "Đã xóa",
+    "from": "Từ",
+    "to": "Tới",
+    "beaware": "Hãy lưu ý",
+    "loading": "Đang tải",
+    "selectValue": "Chọn Giá trị",
+    "selectValues": "Chọn Các giá trị"
+  },
+  "fields": {
+    "amount": "Số tiền",
+    "reference": "Tham chiếu",
+    "reference_id": "ID Tham chiếu",
+    "refundAmount": "Số tiền hoàn",
+    "name": "Tên",
+    "default": "Mặc định",
+    "lastName": "Họ",
+    "firstName": "Tên",
+    "title": "Tiêu đề",
+    "customTitle": "Tiêu đề tùy chỉnh",
+    "manageInventory": "Quản lý tồn kho",
+    "inventoryKit": "Có bộ kho hàng",
+    "inventoryItems": "Mặt hàng trong kho",
+    "inventoryItem": "Mặt hàng trong kho",
+    "requiredQuantity": "Số lượng yêu cầu",
+    "description": "Mô tả",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "repeatPassword": "Nhập lại mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "newPassword": "Mật khẩu mới",
+    "repeatNewPassword": "Nhập lại mật khẩu mới",
+    "categories": "Danh mục",
+    "shippingMethod": "Phương thức vận chuyển",
+    "configurations": "Cấu hình",
+    "enabledInStore": "Đã bật trong cửa hàng",
+    "isReturn": "Là hàng trả lại",
+    "conditions": "Điều kiện",
+    "category": "Danh mục",
+    "collection": "Bộ sưu tập",
+    "discountable": "Có thể giảm giá",
+    "promotionCode": "Mã khuyến mãi",
+    "handle": "Đường dẫn (Handle)",
+    "subtitle": "Tiêu đề phụ",
+    "by": "Bởi",
+    "item": "Mặt hàng",
+    "qty": "SL.",
+    "limit": "Giới hạn",
+    "tags": "Thẻ",
+    "type": "Loại",
+    "reason": "Lý do",
+    "none": "không có",
+    "all": "tất cả",
+    "search": "Tìm kiếm",
+    "percentage": "Phần trăm",
+    "sales_channels": "Kênh bán hàng",
+    "customer_groups": "Nhóm khách hàng",
+    "product_tags": "Thẻ sản phẩm",
+    "product_types": "Loại sản phẩm",
+    "product_collections": "Bộ sưu tập sản phẩm",
+    "status": "Trạng thái",
+    "code": "Mã",
+    "value": "Giá trị",
+    "disabled": "Đã tắt",
+    "dynamic": "Động",
+    "normal": "Bình thường",
+    "years": "Năm",
+    "months": "Tháng",
+    "days": "Ngày",
+    "hours": "Giờ",
+    "minutes": "Phút",
+    "totalRedemptions": "Tổng số lần đổi mã",
+    "countries": "Quốc gia",
+    "serviceZone": "Khu vực dịch vụ",
+    "paymentProviders": "Nhà cung cấp thanh toán",
+    "refundReason": "Lý do hoàn tiền",
+    "fulfillmentProviders": "Nhà cung cấp vận chuyển",
+    "fulfillmentProvider": "Nhà cung cấp vận chuyển",
+    "providers": "Nhà cung cấp",
+    "availability": "Tính khả dụng",
+    "inventory": "Kho hàng",
+    "optional": "Không bắt buộc",
+    "note": "Ghi chú",
+    "automaticTaxes": "Thuế tự động",
+    "taxInclusivePricing": "Giá bao gồm thuế",
+    "currency": "Tiền tệ",
+    "address": "Địa chỉ",
+    "address2": "Căn hộ, dãy phòng, v.v.",
+    "city": "Thành phố",
+    "postalCode": "Mã bưu điện",
+    "country": "Quốc gia",
+    "state": "Tiểu bang",
+    "province": "Tỉnh/Thành phố",
+    "company": "Công ty",
+    "phone": "Số điện thoại",
+    "metadata": "Siêu dữ liệu (Metadata)",
+    "selectCountry": "Chọn quốc gia",
+    "products": "Sản phẩm",
+    "variants": "Biến thể",
+    "orders": "Đơn hàng",
+    "account": "Tài khoản",
+    "total": "Tổng Đơn hàng",
+    "paidTotal": "Tổng đã trả",
+    "creditTotal": "Tổng tín dụng",
+    "totalExclTax": "Tổng chưa thuế",
+    "subtotal": "Tạm tính",
+    "shipping": "Vận chuyển",
+    "outboundShipping": "Gửi hàng đi",
+    "returnShipping": "Vận chuyển trả hàng",
+    "tax": "Thuế",
+    "created": "Đã tạo",
+    "key": "Khóa (Key)",
+    "customer": "Khách hàng",
+    "date": "Ngày",
+    "order": "Đơn hàng",
+    "fulfillment": "Xử lý đơn (Fulfillment)",
+    "provider": "Nhà cung cấp",
+    "payment": "Thanh toán",
+    "items": "Mặt hàng",
+    "salesChannel": "Kênh bán hàng",
+    "region": "Khu vực",
+    "discount": "Giảm giá",
+    "role": "Vai trò",
+    "sent": "Đã gửi",
+    "salesChannels": "Kênh bán hàng",
+    "product": "Sản phẩm",
+    "createdAt": "Đã tạo",
+    "updatedAt": "Đã cập nhật",
+    "revokedAt": "Thu hồi lúc",
+    "true": "Đúng",
+    "false": "Sai",
+    "giftCard": "Thẻ quà tặng",
+    "tag": "Thẻ",
+    "dateIssued": "Ngày phát hành",
+    "issuedDate": "Ngày phát hành",
+    "expiryDate": "Ngày hết hạn",
+    "price": "Giá",
+    "priceTemplate": "Giá {{regionOrCurrency}}",
+    "height": "Chiều cao",
+    "width": "Chiều rộng",
+    "length": "Chiều dài",
+    "weight": "Trọng lượng",
+    "midCode": "Mã MID",
+    "hsCode": "Mã HS",
+    "ean": "EAN",
+    "upc": "UPC",
+    "inventoryQuantity": "Số lượng tồn kho",
+    "barcode": "Mã vạch",
+    "countryOfOrigin": "Xuất xứ",
+    "material": "Chất liệu",
+    "thumbnail": "Ảnh thu nhỏ",
+    "sku": "SKU",
+    "managedInventory": "Quản lý tồn kho",
+    "allowBackorder": "Cho phép đặt trước",
+    "inStock": "Tồn kho",
+    "location": "Vị trí",
+    "quantity": "Số lượng",
+    "variant": "Biến thể",
+    "id": "ID",
+    "parent": "Cha",
+    "minSubtotal": "Tạm tính tối thiểu",
+    "maxSubtotal": "Tạm tính tối đa",
+    "shippingProfile": "Hồ sơ vận chuyển",
+    "summary": "Tóm tắt",
+    "details": "Chi tiết",
+    "label": "Nhãn",
+    "rate": "Tỷ lệ",
+    "requiresShipping": "Yêu cầu vận chuyển",
+    "unitPrice": "Đơn giá",
+    "startDate": "Ngày bắt đầu",
+    "endDate": "Ngày kết thúc",
+    "draft": "Nháp",
+    "values": "Các giá trị"
+  },
+  "dateTime": {
+    "years_one": "Năm",
+    "years_other": "Năm",
+    "months_one": "Tháng",
+    "months_other": "Tháng",
+    "weeks_one": "Tuần",
+    "weeks_other": "Tuần",
+    "days_one": "Ngày",
+    "days_other": "Ngày",
+    "hours_one": "Giờ",
+    "hours_other": "Giờ",
+    "minutes_one": "Phút",
+    "minutes_other": "Phút",
+    "seconds_one": "Giây",
+    "seconds_other": "Giây"
+  },
+  "views": {
+    "save": "Lưu",
+    "saveAsNew": "Lưu thành khung nhìn mới",
+    "updateDefaultForEveryone": "Cập nhật mặc định cho mọi người",
+    "updateViewName": "Cập nhật khung nhìn",
+    "prompts": {
+      "updateDefault": {
+        "title": "Cập nhật khung nhìn mặc định",
+        "description": "Thao tác này sẽ cập nhật khung nhìn mặc định cho tất cả người dùng. Bạn có chắc không?",
+        "confirmText": "Cập nhật cho mọi người",
+        "cancelText": "Hủy"
+      },
+      "updateView": {
+        "title": "Cập nhật khung nhìn",
+        "description": "Bạn có chắc chắn muốn cập nhật \"{{name}}\" không?",
+        "confirmText": "Cập nhật",
+        "cancelText": "Hủy"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "authenticationFailed": "Xác thực thất bại",
+      "cloud": "Đăng nhập với Medusa Cloud"
+    }
+  }
+}

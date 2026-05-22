@@ -1,0 +1,15 @@
+cd shoe-store-backend
+npm run dev
+
+cd shoe-store-backend-storefront
+npm run dev
+
+vẽ cấu trúc thư mục 
+tree /f /a > tree.txt
+
+
+chụp màn hình full
+Bước 1: Mở trang web cần chụp, nhấn F12 (hoặc Ctrl + Shift + I) để mở bảng Developer Tools.
+Bước 2: Nhấn tiếp tổ hợp phím Ctrl + Shift + P.
+Bước 3: Gõ chữ full
+Bước 4: Chọn dòng Capture full size screenshot 
