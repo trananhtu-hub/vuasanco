@@ -36,6 +36,11 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <main className="relative flex min-h-screen flex-col overflow-x-hidden">
           {props.children}
         </main>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="mXQaVd5C2d-aLeSo0KQRr";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();`
+          }}
+        />
       </body>
     </html>
   )

@@ -4,6 +4,10 @@ npm run dev
 cd shoe-store-backend-storefront
 npm run dev
 
+cd shoe-store-backend
+node clean-customer.js
+node clean-customer.js trananhtu25012004@gmail.com
+
 vẽ cấu trúc thư mục 
 tree /f /a > tree.txt
 

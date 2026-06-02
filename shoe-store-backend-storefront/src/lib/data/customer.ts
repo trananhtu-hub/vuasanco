@@ -61,6 +61,7 @@ export const updateCustomer = async (body: HttpTypes.StoreUpdateCustomer) => {
 
 export async function signup(_currentState: unknown, formData: FormData) {
   const password = formData.get("password") as string
+  const countryCode = (formData.get("country_code") as string) || "vn"
   const customerForm = {
     email: formData.get("email") as string,
     first_name: formData.get("first_name") as string,
@@ -86,20 +87,15 @@ export async function signup(_currentState: unknown, formData: FormData) {
       headers
     )
 
-    const loginToken = await sdk.auth.login("customer", "emailpass", {
-      email: customerForm.email,
-      password,
-    })
+    // Xóa auth token để không tự động đăng nhập khi chưa xác thực
+    await removeAuthToken()
 
-    await setAuthToken(loginToken as string)
-
-    const customerCacheTag = await getCacheTag("customers")
-    revalidateTag(customerCacheTag)
-
-    await transferCart()
-
-    return createdCustomer
+    // Chuyển hướng đến trang thông báo chờ xác thực email
+    redirect(`/${countryCode}/email-verification-pending`)
   } catch (error: any) {
+    if (error.message === "NEXT_REDIRECT" || (error.digest && error.digest.startsWith("NEXT_REDIRECT"))) {
+      throw error
+    }
     return error.toString()
   }
 }
@@ -109,15 +105,34 @@ export async function login(_currentState: unknown, formData: FormData) {
   const password = formData.get("password") as string
 
   try {
-    await sdk.auth
-      .login("customer", "emailpass", { email, password })
-      .then(async (token) => {
-        await setAuthToken(token as string)
-        const customerCacheTag = await getCacheTag("customers")
-        revalidateTag(customerCacheTag)
-      })
+    // 1. Kiểm tra thông tin đăng nhập qua Medusa Auth
+    const token = await sdk.auth.login("customer", "emailpass", { email, password })
+
+    // 2. Đăng nhập thành công, tiếp tục kiểm tra xem email đã được xác thực chưa
+    const backendUrl = (process.env.MEDUSA_BACKEND_URL || "http://127.0.0.1:9000").replace("localhost", "127.0.0.1")
+    const verifyRes = await fetch(`${backendUrl}/store/customer/verify-status?email=${encodeURIComponent(email)}`, {
+      method: "GET",
+      cache: "no-store",
+      headers: {
+        "x-publishable-api-key": process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY || "",
+      },
+    })
+
+    if (verifyRes.status === 200) {
+      const verifyData = await verifyRes.json()
+      if (!verifyData.is_verified) {
+        // Nếu chưa xác thực -> Chặn đăng nhập, xóa token
+        await removeAuthToken()
+        return "Tài khoản của bạn chưa được xác thực email. Vui lòng kiểm tra hộp thư Gmail để kích hoạt tài khoản."
+      }
+    }
+
+    // 3. Nếu đã xác thực -> Lưu token và cập nhật bộ nhớ cache
+    await setAuthToken(token as string)
+    const customerCacheTag = await getCacheTag("customers")
+    revalidateTag(customerCacheTag)
   } catch (error: any) {
-    return error.toString()
+    return "Email hoặc mật khẩu không chính xác."
   }
 
   try {

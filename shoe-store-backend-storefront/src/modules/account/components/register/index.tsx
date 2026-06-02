@@ -2,6 +2,7 @@
 
 import { useActionState } from "react" // Cập nhật cho React 19
 import React, { useState } from "react"
+import { useParams } from "next/navigation"
 import { signup } from "@lib/data/customer"
 import { HttpTypes } from "@medusajs/types"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -18,6 +19,8 @@ const NAME_REGEX = /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèé
 const PHONE_REGEX = /^(0|\+84)(3|5|7|8|9)[0-9]{8}$/;
 
 const Register = ({ template }: Props) => {
+  const params = useParams()
+  const countryCode = (params.countryCode as string) || "vn"
   // Sử dụng useActionState thay cho useFormState
   const [message, formAction] = useActionState(signup, null)
   const [localErrors, setLocalErrors] = useState<Record<string, string>>({})
@@ -57,6 +60,7 @@ const Register = ({ template }: Props) => {
         Tạo tài khoản để nhận những ưu đãi tốt nhất và theo dõi đơn hàng của bạn.
       </p>
       <form className="w-full flex flex-col" action={handleClientValidation}>
+        <input type="hidden" name="country_code" value={countryCode} />
         <div className="flex flex-col w-full gap-y-2">
           <Input
             label="Tên"
