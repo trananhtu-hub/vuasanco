@@ -51,19 +51,29 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
     const productCategory = await getCategoryByHandle(params.category)
 
-    const title = productCategory.name + " | Medusa Store"
+    if (!productCategory) {
+      return {
+        title: "Danh mục | Vuasanco",
+        description: "Danh mục sản phẩm",
+      }
+    }
+
+    const title = productCategory.name + " | Vuasanco Store"
 
     const description = productCategory.description ?? `${title} category.`
 
     return {
-      title: `${title} | Medusa Store`,
+      title: `${title} | Vuasanco Store`,
       description,
       alternates: {
         canonical: `${params.category.join("/")}`,
       },
     }
   } catch (error) {
-    notFound()
+    return {
+      title: "Danh mục | Vuasanco",
+      description: "Danh mục sản phẩm",
+    }
   }
 }
 
