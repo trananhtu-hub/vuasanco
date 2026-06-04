@@ -1,6 +1,6 @@
 "use server"
 
-import { sdk } from "@lib/config"
+import { sdk, MEDUSA_BACKEND_URL } from "@lib/config"
 import { sortProducts } from "@lib/util/sort-products"
 import { HttpTypes } from "@medusajs/types"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
@@ -74,9 +74,40 @@ export const listProducts = async ({
     .then(({ products, count }) => {
       const nextPage = count > offset + limit ? pageParam + 1 : null
 
+      const transformedProducts = products.map((product) => {
+        if (product.thumbnail && product.thumbnail.startsWith("http://localhost:9000")) {
+          product.thumbnail = product.thumbnail.replace("http://localhost:9000", MEDUSA_BACKEND_URL)
+        }
+        if (product.images) {
+          product.images = product.images.map((img) => {
+            if (img.url && img.url.startsWith("http://localhost:9000")) {
+              img.url = img.url.replace("http://localhost:9000", MEDUSA_BACKEND_URL)
+            }
+            return img
+          })
+        }
+        if (product.variants) {
+          product.variants = product.variants.map((v) => {
+            if (v.thumbnail && v.thumbnail.startsWith("http://localhost:9000")) {
+              v.thumbnail = v.thumbnail.replace("http://localhost:9000", MEDUSA_BACKEND_URL)
+            }
+            if (v.images) {
+              v.images = v.images.map((img) => {
+                if (img.url && img.url.startsWith("http://localhost:9000")) {
+                  img.url = img.url.replace("http://localhost:9000", MEDUSA_BACKEND_URL)
+                }
+                return img
+              })
+            }
+            return v
+          })
+        }
+        return product
+      })
+
       return {
         response: {
-          products,
+          products: transformedProducts,
           count,
         },
         nextPage: nextPage,

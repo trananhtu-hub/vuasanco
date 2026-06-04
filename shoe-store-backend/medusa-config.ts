@@ -2,6 +2,9 @@ import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
+const backendUrl = process.env.MEDUSA_BACKEND_URL 
+  || (process.env.RAILWAY_STATIC_URL ? `https://${process.env.RAILWAY_STATIC_URL}` : "http://localhost:9000")
+
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
@@ -26,7 +29,7 @@ module.exports = defineConfig({
             id: "local",
             options: {
               upload_dir: "static",
-              backend_url: process.env.MEDUSA_BACKEND_URL || "http://localhost:9000",
+              backend_url: backendUrl,
             },
           },
         ],

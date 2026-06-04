@@ -2,7 +2,7 @@ import { getLocaleHeader } from "@lib/util/get-locale-header"
 import Medusa, { FetchArgs, FetchInput } from "@medusajs/js-sdk"
 
 // Defaults to standard port for Medusa server
-let MEDUSA_BACKEND_URL = "http://localhost:9000"
+export let MEDUSA_BACKEND_URL = "http://localhost:9000"
 
 if (process.env.MEDUSA_BACKEND_URL) {
   MEDUSA_BACKEND_URL = process.env.MEDUSA_BACKEND_URL
@@ -15,6 +15,33 @@ export const sdk = new Medusa({
 })
 
 const originalFetch = sdk.client.fetch.bind(sdk.client)
+
+function replaceLocalhostUrl(obj: any, targetUrl: string): any {
+  if (!obj) return obj
+
+  if (typeof obj === "string") {
+    if (obj.startsWith("http://localhost:9000")) {
+      return obj.replace("http://localhost:9000", targetUrl)
+    }
+    return obj
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map((item) => replaceLocalhostUrl(item, targetUrl))
+  }
+
+  if (typeof obj === "object") {
+    const newObj: any = {}
+    for (const key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        newObj[key] = replaceLocalhostUrl(obj[key], targetUrl)
+      }
+    }
+    return newObj
+  }
+
+  return obj
+}
 
 sdk.client.fetch = async <T>(
   input: FetchInput,
@@ -35,5 +62,6 @@ sdk.client.fetch = async <T>(
     ...init,
     headers: newHeaders,
   }
-  return originalFetch(input, init)
+  const response = await originalFetch(input, init)
+  return replaceLocalhostUrl(response, MEDUSA_BACKEND_URL) as T
 }
