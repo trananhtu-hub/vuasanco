@@ -2,8 +2,12 @@ import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
-const backendUrl = process.env.MEDUSA_BACKEND_URL 
+let backendUrl = process.env.MEDUSA_BACKEND_URL 
   || (process.env.RAILWAY_STATIC_URL ? `https://${process.env.RAILWAY_STATIC_URL}` : "http://localhost:9000")
+
+if (!backendUrl.endsWith("/static")) {
+  backendUrl = `${backendUrl}/static`
+}
 
 module.exports = defineConfig({
   projectConfig: {

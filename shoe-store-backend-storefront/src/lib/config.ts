@@ -20,10 +20,20 @@ function replaceLocalhostUrl(obj: any, targetUrl: string): any {
   if (!obj) return obj
 
   if (typeof obj === "string") {
-    if (obj.startsWith("http://localhost:9000")) {
-      return obj.replace("http://localhost:9000", targetUrl)
+    let url = obj
+    if (url.startsWith("http://localhost:9000")) {
+      url = url.replace("http://localhost:9000", targetUrl)
     }
-    return obj
+
+    const normalizedTarget = targetUrl.endsWith("/") ? targetUrl.slice(0, -1) : targetUrl
+
+    if (url.startsWith(normalizedTarget)) {
+      const pathPart = url.substring(normalizedTarget.length)
+      if (pathPart.startsWith("/") && !pathPart.startsWith("/static/")) {
+        url = normalizedTarget + "/static" + pathPart
+      }
+    }
+    return url
   }
 
   if (Array.isArray(obj)) {
