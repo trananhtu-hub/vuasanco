@@ -14,7 +14,7 @@ class EmailVerificationService extends MedusaService({
   constructor() {
     // @ts-ignore
     super(...arguments)
-    
+
     this.transporter_ = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "smtp.gmail.com",
       port: parseInt(process.env.SMTP_PORT || "587"),
@@ -35,7 +35,7 @@ class EmailVerificationService extends MedusaService({
     expiresAt.setHours(expiresAt.getHours() + 24) // 24 hours expiry
 
     const existing = await this.listEmailVerifications({ customer_id: customerId })
-    
+
     if (existing.length > 0) {
       await this.updateEmailVerifications({
         id: existing[0].id,
@@ -56,7 +56,7 @@ class EmailVerificationService extends MedusaService({
 
   async sendVerificationEmail(email: string, token: string): Promise<void> {
     const verifyUrl = `${process.env.STOREFRONT_URL || "http://localhost:8000"}/email-verify?token=${token}`
-    
+
     const mailOptions = {
       from: process.env.SMTP_FROM || `"Vua San Co" <${process.env.SMTP_USER}>`,
       to: email,
