@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { MEDUSA_BACKEND_URL } from "@lib/config"
 import { listProducts } from "@lib/data/products"
 
+export const dynamic = "force-dynamic"
+
 export async function GET() {
   let listProductsOutput = null
   try {
