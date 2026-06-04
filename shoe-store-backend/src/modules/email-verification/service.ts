@@ -2,6 +2,9 @@ import { MedusaService } from "@medusajs/framework/utils"
 import EmailVerification from "./models/email-verification"
 import nodemailer from "nodemailer"
 import crypto from "crypto"
+import dns from "dns"
+
+dns.setDefaultResultOrder("ipv4first")
 
 class EmailVerificationService extends MedusaService({
   EmailVerification,
@@ -20,6 +23,9 @@ class EmailVerificationService extends MedusaService({
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      pool: true,
+      maxConnections: 5,
+      maxMessages: 100,
     })
   }
 
