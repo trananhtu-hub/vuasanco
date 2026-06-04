@@ -25,10 +25,12 @@ function replaceLocalhostUrl(obj: any, targetUrl: string): any {
       url = url.replace("http://localhost:9000", targetUrl)
     }
 
-    if (url.startsWith(targetUrl)) {
-      const pathPart = url.substring(targetUrl.length)
+    const normalizedTarget = targetUrl.endsWith("/") ? targetUrl.slice(0, -1) : targetUrl
+
+    if (url.startsWith(normalizedTarget)) {
+      const pathPart = url.substring(normalizedTarget.length)
       if (pathPart.startsWith("/") && !pathPart.startsWith("/static/")) {
-        url = targetUrl + "/static" + pathPart
+        url = normalizedTarget + "/static" + pathPart
       }
     }
     return url
