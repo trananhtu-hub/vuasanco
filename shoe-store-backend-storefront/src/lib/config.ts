@@ -47,6 +47,26 @@ function replaceLocalhostUrl(obj: any, targetUrl: string): any {
         newObj[key] = replaceLocalhostUrl(obj[key], targetUrl)
       }
     }
+
+    // Fallback for Product thumbnail
+    if (newObj.id?.startsWith("prod_") || ("title" in newObj && "images" in newObj)) {
+      if (!newObj.thumbnail && newObj.images?.[0]?.url) {
+        newObj.thumbnail = newObj.images[0].url
+      }
+    }
+
+    // Fallback for LineItem thumbnail
+    if (newObj.id?.startsWith("item_") || "product_title" in newObj) {
+      if (!newObj.thumbnail) {
+        newObj.thumbnail =
+          newObj.product?.images?.[0]?.url ||
+          newObj.variant?.product?.images?.[0]?.url ||
+          newObj.product?.thumbnail ||
+          newObj.variant?.product?.thumbnail ||
+          null
+      }
+    }
+
     return newObj
   }
 
