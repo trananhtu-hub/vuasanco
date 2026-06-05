@@ -6,9 +6,9 @@ export async function GET(
 ) {
   try {
     const query = req.scope.resolve("query");
-    const { data: keys } = await query({
-      entity: "publishable_api_key",
-      fields: ["id", "title"],
+    const keys = await query({
+      entity: "api_key",
+      fields: ["id", "title", "token", "type"],
     });
     res.json({ keys });
   } catch (err: any) {
