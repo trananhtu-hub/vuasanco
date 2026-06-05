@@ -16,10 +16,6 @@ export const sdk = new Medusa({
 
 const originalFetch = sdk.client.fetch.bind(sdk.client)
 
-// Global array for logging URL replacement execution in production
-if (typeof global !== "undefined") {
-  (global as any).replaceLogs = [];
-}
 
 function replaceLocalhostUrl(obj: any, targetUrl: string): any {
   if (!obj) return obj
@@ -55,30 +51,13 @@ function replaceLocalhostUrl(obj: any, targetUrl: string): any {
 
     // Fallback for Product thumbnail
     if (newObj.id?.startsWith("prod_") || ("title" in newObj && "images" in newObj)) {
-      const prevThumbnail = newObj.thumbnail;
-      const imagesCount = newObj.images?.length || 0;
-      const firstImageUrl = newObj.images?.[0]?.url;
-      
       if (!newObj.thumbnail && newObj.images?.[0]?.url) {
         newObj.thumbnail = newObj.images[0].url
-      }
-      
-      if (typeof global !== "undefined" && (global as any).replaceLogs) {
-        (global as any).replaceLogs.push({
-          type: "product",
-          id: newObj.id,
-          title: newObj.title,
-          prevThumbnail,
-          newThumbnail: newObj.thumbnail,
-          imagesCount,
-          firstImageUrl
-        });
       }
     }
 
     // Fallback for LineItem thumbnail
     if (newObj.id?.startsWith("item_") || newObj.id?.startsWith("cali_") || "product_title" in newObj) {
-      const prevThumbnail = newObj.thumbnail;
       if (!newObj.thumbnail) {
         newObj.thumbnail =
           newObj.product?.images?.[0]?.url ||
@@ -86,18 +65,6 @@ function replaceLocalhostUrl(obj: any, targetUrl: string): any {
           newObj.product?.thumbnail ||
           newObj.variant?.product?.thumbnail ||
           null
-      }
-      
-      if (typeof global !== "undefined" && (global as any).replaceLogs) {
-        (global as any).replaceLogs.push({
-          type: "line_item",
-          id: newObj.id,
-          product_title: newObj.product_title,
-          prevThumbnail,
-          newThumbnail: newObj.thumbnail,
-          hasProductRelation: !!newObj.product,
-          hasVariantRelation: !!newObj.variant
-        });
       }
     }
 
@@ -127,22 +94,5 @@ sdk.client.fetch = async <T>(
     headers: newHeaders,
   }
   const response = await originalFetch(input, init)
-  
-  if (typeof global !== "undefined" && (global as any).replaceLogs) {
-    (global as any).replaceLogs.push({
-      action: "fetch_start",
-      url: input,
-    });
-  }
-  
-  const replaced = replaceLocalhostUrl(response, MEDUSA_BACKEND_URL) as T
-  
-  if (typeof global !== "undefined" && (global as any).replaceLogs) {
-    (global as any).replaceLogs.push({
-      action: "fetch_end",
-      url: input,
-    });
-  }
-  
-  return replaced;
+  return replaceLocalhostUrl(response, MEDUSA_BACKEND_URL) as T
 }
