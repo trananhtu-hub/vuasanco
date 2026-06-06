@@ -1,32 +1,13 @@
 import { MedusaService } from "@medusajs/framework/utils"
 import EmailVerification from "./models/email-verification"
-import nodemailer from "nodemailer"
 import crypto from "crypto"
-import dns from "dns"
-
-dns.setDefaultResultOrder("ipv4first")
 
 class EmailVerificationService extends MedusaService({
   EmailVerification,
 }) {
-  protected transporter_: nodemailer.Transporter
-
   constructor() {
     // @ts-ignore
     super(...arguments)
-
-    this.transporter_ = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: parseInt(process.env.SMTP_PORT || "587"),
-      secure: process.env.SMTP_SECURE === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-      pool: true,
-      maxConnections: 5,
-      maxMessages: 100,
-    })
   }
 
   async generateVerificationToken(customerId: string): Promise<string> {
@@ -57,11 +38,19 @@ class EmailVerificationService extends MedusaService({
   async sendVerificationEmail(email: string, token: string): Promise<void> {
     const verifyUrl = `${process.env.STOREFRONT_URL || "http://localhost:8000"}/email-verify?token=${token}`
 
-    const mailOptions = {
-      from: process.env.SMTP_FROM || `"Vua San Co" <${process.env.SMTP_USER}>`,
-      to: email,
-      subject: "Xác thực tài khoản Vua Sân Cỏ của bạn",
-      html: `
+    const fromStr = process.env.SMTP_FROM || ""
+    const emailMatch = fromStr.match(/<([^>]+)>/)
+    const nameMatch = fromStr.match(/^"([^"]+)"/) || fromStr.match(/^([^<]+)/)
+
+    const senderEmail = emailMatch ? emailMatch[1].trim() : (fromStr.includes("@") ? fromStr.trim() : "cammuoitus@gmail.com")
+    const senderName = nameMatch ? nameMatch[1].trim() : "Vua Sân Cỏ"
+
+    const apiKey = process.env.SMTP_PASS
+    if (!apiKey) {
+      throw new Error("SMTP_PASS (Brevo API Key) is not configured in environment variables")
+    }
+
+    const htmlContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
           <h2 style="color: #1a1a1a; text-align: center;">Chào mừng bạn đến với Vua Sân Cỏ!</h2>
           <p>Cảm ơn bạn đã đăng ký tài khoản. Để hoàn tất quy trình đăng ký và bắt đầu mua sắm giày bóng đá chính hãng, vui lòng xác nhận địa chỉ email của bạn bằng cách nhấn vào liên kết bên dưới:</p>
@@ -72,10 +61,34 @@ class EmailVerificationService extends MedusaService({
           <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
           <p style="color: #999; font-size: 12px; text-align: center;">Vua Sân Cỏ - Giày Bóng Đá Chính Hãng</p>
         </div>
-      `,
-    }
+      `
 
-    await this.transporter_.sendMail(mailOptions)
+    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        "accept": "application/json",
+        "api-key": apiKey,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        sender: {
+          name: senderName,
+          email: senderEmail,
+        },
+        to: [
+          {
+            email: email,
+          },
+        ],
+        subject: "Xác thực tài khoản Vua Sân Cỏ của bạn",
+        htmlContent: htmlContent,
+      }),
+    })
+
+    if (!response.ok) {
+      const errorText = await response.text()
+      throw new Error(`Brevo HTTP API Error (${response.status}): ${errorText}`)
+    }
   }
 }
 
