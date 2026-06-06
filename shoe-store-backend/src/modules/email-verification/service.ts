@@ -1,6 +1,9 @@
 import { MedusaService } from "@medusajs/framework/utils"
 import EmailVerification from "./models/email-verification"
 import crypto from "crypto"
+import dns from "dns"
+
+dns.setDefaultResultOrder("ipv4first")
 
 class EmailVerificationService extends MedusaService({
   EmailVerification,
