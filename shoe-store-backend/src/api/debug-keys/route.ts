@@ -6,7 +6,7 @@ export async function GET(
 ) {
   try {
     const query = req.scope.resolve("query");
-    const keys = await query({
+    const { data: keys } = await query.graph({
       entity: "api_key",
       fields: ["id", "title", "token", "type"],
     });
