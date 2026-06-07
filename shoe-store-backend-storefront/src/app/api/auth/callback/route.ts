@@ -40,6 +40,63 @@ export async function GET(request: Request) {
   }
 
   if (jwtToken) {
+    // Giải mã JWT để kiểm tra xem đã có customer_id (actor_id) chưa
+    try {
+      const payloadBase64 = jwtToken.split(".")[1]
+      const payloadJson = Buffer.from(payloadBase64, "base64").toString("utf-8")
+      const payload = JSON.parse(payloadJson)
+
+      const actorId = payload.actor_id
+      
+      // Nếu actor_id chưa được liên kết (đăng nhập Google lần đầu)
+      if (!actorId) {
+        const email = payload.email || payload.user_metadata?.email
+        const first_name = payload.user_metadata?.given_name || payload.user_metadata?.name || "Google"
+        const last_name = payload.user_metadata?.family_name || "User"
+        
+        console.log(`Đăng nhập Google lần đầu cho email: ${email}. Đang tạo tài khoản khách hàng...`)
+
+        // 1. Tạo bản ghi Customer trên Backend
+        const publishableKey = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY || ""
+        const createCustomerResponse = await fetch(`${backendUrl}/store/customers`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${jwtToken}`,
+            "x-publishable-api-key": publishableKey,
+          },
+          body: JSON.stringify({
+            email,
+            first_name,
+            last_name,
+          }),
+        })
+
+        if (!createCustomerResponse.ok) {
+          const createErrorText = await createCustomerResponse.text()
+          console.error("Lỗi khi tạo Customer từ token Google:", createErrorText)
+        }
+
+        // 2. Làm mới JWT Token để nhận được token mới chứa actor_id (customer_id)
+        const refreshResponse = await fetch(`${backendUrl}/auth/token/refresh`, {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${jwtToken}`,
+          },
+        })
+
+        if (refreshResponse.ok) {
+          const refreshData = await refreshResponse.json()
+          jwtToken = refreshData.token
+          console.log("Làm mới token thành công với actor_id mới.")
+        } else {
+          console.error("Lỗi khi làm mới token sau khi tạo customer:", await refreshResponse.text())
+        }
+      }
+    } catch (jwtErr) {
+      console.error("Lỗi xử lý JWT hoặc tạo customer liên kết:", jwtErr)
+    }
+
     const cookieStore = await cookies()
     cookieStore.set("_medusa_jwt", jwtToken, {
       maxAge: 60 * 60 * 24 * 7,
