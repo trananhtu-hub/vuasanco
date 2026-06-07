@@ -57,7 +57,12 @@ function replaceLocalhostUrl(obj: any, targetUrl: string): any {
     }
 
     // Fallback for LineItem thumbnail
-    if (newObj.id?.startsWith("item_") || newObj.id?.startsWith("cali_") || "product_title" in newObj) {
+    if (
+      newObj.id?.startsWith("item_") ||
+      newObj.id?.startsWith("cali_") ||
+      newObj.id?.startsWith("ordli_") ||
+      "product_title" in newObj
+    ) {
       if (!newObj.thumbnail) {
         newObj.thumbnail =
           newObj.product?.images?.[0]?.url ||

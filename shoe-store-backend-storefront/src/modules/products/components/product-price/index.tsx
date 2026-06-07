@@ -21,38 +21,47 @@ export default function ProductPrice({
     return <div className="block w-32 h-9 bg-gray-100 animate-pulse" />
   }
 
+  const isSale = selectedPrice.price_type === "sale"
+
   return (
-    <div className="flex flex-col text-ui-fg-base">
-      <span
-        className={clx("text-xl-semi", {
-          "text-ui-fg-interactive": selectedPrice.price_type === "sale",
-        })}
-      >
-        {/* ĐÃ SỬA: Đã xóa chữ "From " ở đây */}
+    <div className="flex flex-col gap-2 mt-4">
+      {/* Container giá chính */}
+      <div className="flex flex-wrap items-center gap-4">
+        {/* Giá bán hiện tại */}
         <span
-          data-testid="product-price"
-          data-value={selectedPrice.calculated_price_number}
+          className={clx(
+            "font-editorial text-4xl font-black tracking-tight",
+            isSale ? "text-editorial-neonPink" : "text-editorial-dark"
+          )}
         >
-          {selectedPrice.calculated_price}
-        </span>
-      </span>
-      {selectedPrice.price_type === "sale" && (
-        <>
-          <p>
-            {/* ĐÃ SỬA: Đổi Original thành Giá gốc */}
-            <span className="text-ui-fg-subtle">Giá gốc: </span>
-            <span
-              className="line-through"
-              data-testid="original-product-price"
-              data-value={selectedPrice.original_price_number}
-            >
-              {selectedPrice.original_price}
-            </span>
-          </p>
-          <span className="text-ui-fg-interactive">
-            -{selectedPrice.percentage_diff}%
+          <span
+            data-testid="product-price"
+            data-value={selectedPrice.calculated_price_number}
+          >
+            {selectedPrice.calculated_price}
           </span>
-        </>
+        </span>
+
+        {/* Nhãn % giảm giá phong cách Neo-Brutalism */}
+        {isSale && (
+          <div className="transform -rotate-2 bg-editorial-neonVolt text-editorial-dark font-sans text-xs font-black px-2 py-0.5 border-2 border-editorial-dark shadow-[2px_2px_0px_0px_#0F0F0F] uppercase tracking-widest">
+            -{selectedPrice.percentage_diff}% OFF
+          </div>
+        )}
+      </div>
+
+      {/* Giá gốc dưới dạng text phụ khi có sale */}
+      {isSale && (
+        <div className="flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-gray-500">
+          <span>Giá gốc:</span>
+          <span
+            className="line-through decoration-editorial-neonPink decoration-2"
+            data-testid="original-product-price"
+            data-value={selectedPrice.original_price_number}
+          >
+            {selectedPrice.original_price}
+          </span>
+        </div>
       )}
     </div>
   )

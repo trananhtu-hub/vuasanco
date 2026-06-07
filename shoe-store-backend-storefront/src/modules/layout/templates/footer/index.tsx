@@ -51,9 +51,9 @@ export default async function Footer() {
             <span className="font-editorial text-3xl font-black uppercase tracking-wider text-editorial-dark mb-6 group-hover:text-editorial-neonPink transition-colors">Hỗ Trợ</span>
             <ul className="flex flex-col gap-y-6 text-lg font-editorial font-bold uppercase tracking-widest">
               <li><LocalizedClientLink href="/huong-dan-chon-size" className="hover:text-white hover:bg-editorial-dark transition-all px-2 -mx-2 inline-block">Hướng dẫn chọn size</LocalizedClientLink></li>
-              <li><LocalizedClientLink href="/chinh-sach-doi-tra" className="hover:text-white hover:bg-editorial-dark transition-all px-2 -mx-2 inline-block">Đổi trả & Hoàn tiền</LocalizedClientLink></li>
+              <li><LocalizedClientLink href="/doi-tra-hoan-tien" className="hover:text-white hover:bg-editorial-dark transition-all px-2 -mx-2 inline-block">Đổi trả & Hoàn tiền</LocalizedClientLink></li>
               <li><LocalizedClientLink href="/chinh-sach-bao-hanh" className="hover:text-white hover:bg-editorial-dark transition-all px-2 -mx-2 inline-block">Chính sách bảo hành</LocalizedClientLink></li>
-              <li><LocalizedClientLink href="/chinh-sach-bao-mat" className="hover:text-white hover:bg-editorial-dark transition-all px-2 -mx-2 inline-block">Bảo mật thông tin</LocalizedClientLink></li>
+              <li><LocalizedClientLink href="/bao-mat-thong-tin" className="hover:text-white hover:bg-editorial-dark transition-all px-2 -mx-2 inline-block">Bảo mật thông tin</LocalizedClientLink></li>
             </ul>
           </div>
 

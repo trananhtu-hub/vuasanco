@@ -101,17 +101,12 @@ export default async function SalePage(props: Params) {
       ) : (
         <ul className="grid grid-cols-2 w-full small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-16 pb-16">
           {saleProducts.map((p, index) => {
-            const isBrutalistSpecial = index % 5 === 2
             const isStaggeredOffset = index % 2 === 1
 
             return (
               <li
                 key={p.id}
-                className={`transition-all duration-500 hover:z-10 ${
-                  isBrutalistSpecial
-                    ? "border-2 border-editorial-dark p-4 bg-white shadow-[6px_6px_0px_0px_#D3FF24] hover:shadow-[6px_6px_0px_0px_#FF0055] transition-all duration-300 rounded-[2px] transform hover:-translate-y-1"
-                    : "border border-transparent p-2 hover:bg-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.03)] transition-all duration-300 rounded-[2px]"
-                } ${isStaggeredOffset ? "md:translate-y-8" : ""}`}
+                className={`transition-all duration-500 hover:z-10 border border-transparent p-2 hover:bg-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.03)] transition-all duration-300 rounded-[2px] ${isStaggeredOffset ? "md:translate-y-8" : ""}`}
               >
                 <ProductPreview product={p} region={region} />
               </li>
