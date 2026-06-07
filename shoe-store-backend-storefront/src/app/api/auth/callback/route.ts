@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import { cookies } from "next/headers"
 
 export async function GET(request: Request) {
+  const backendUrl = process.env.MEDUSA_BACKEND_URL || "http://localhost:9000"
   const { searchParams } = new URL(request.url)
   const code = searchParams.get("code")
   const state = searchParams.get("state")
@@ -18,8 +19,6 @@ export async function GET(request: Request) {
   // Nếu Google chuyển hướng trực tiếp về storefront kèm code & state
   if (code && state) {
     try {
-      const backendUrl = process.env.MEDUSA_BACKEND_URL || "http://localhost:9000"
-      
       // Gọi lên backend để trao đổi code lấy JWT token
       const response = await fetch(
         `${backendUrl}/auth/customer/google/callback?code=${code}&state=${state}`
@@ -48,33 +47,27 @@ export async function GET(request: Request) {
 
       const actorId = payload.actor_id
       
-      // Nếu actor_id chưa được liên kết (đăng nhập Google lần đầu)
+      // Nếu actor_id chưa được liên kết (đăng nhập Google lần đầu hoặc chưa liên kết Customer)
       if (!actorId) {
         const email = payload.email || payload.user_metadata?.email
-        const first_name = payload.user_metadata?.given_name || payload.user_metadata?.name || "Google"
-        const last_name = payload.user_metadata?.family_name || "User"
-        
-        console.log(`Đăng nhập Google lần đầu cho email: ${email}. Đang tạo tài khoản khách hàng...`)
+        console.log(`Đăng nhập Google: email ${email} chưa liên kết với Customer. Tiến hành xử lý liên kết...`)
 
-        // 1. Tạo bản ghi Customer trên Backend
+        // 1. Gọi custom endpoint để liên kết hoặc tạo Customer mới
         const publishableKey = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY || ""
-        const createCustomerResponse = await fetch(`${backendUrl}/store/customers`, {
+        const createCustomerResponse = await fetch(`${backendUrl}/store/custom/google-link`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${jwtToken}`,
             "x-publishable-api-key": publishableKey,
           },
-          body: JSON.stringify({
-            email,
-            first_name,
-            last_name,
-          }),
         })
 
         if (!createCustomerResponse.ok) {
           const createErrorText = await createCustomerResponse.text()
-          console.error("Lỗi khi tạo Customer từ token Google:", createErrorText)
+          console.error("Lỗi khi liên kết hoặc tạo Customer từ token Google:", createErrorText)
+        } else {
+          console.log("Xử lý liên kết/tạo Customer từ Google thành công.")
         }
 
         // 2. Làm mới JWT Token để nhận được token mới chứa actor_id (customer_id)
@@ -90,7 +83,7 @@ export async function GET(request: Request) {
           jwtToken = refreshData.token
           console.log("Làm mới token thành công với actor_id mới.")
         } else {
-          console.error("Lỗi khi làm mới token sau khi tạo customer:", await refreshResponse.text())
+          console.error("Lỗi khi làm mới token sau khi liên kết customer:", await refreshResponse.text())
         }
       }
     } catch (jwtErr) {
