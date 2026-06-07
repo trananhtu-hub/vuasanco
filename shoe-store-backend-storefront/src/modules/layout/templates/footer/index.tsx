@@ -39,10 +39,10 @@ export default async function Footer() {
           <div className="flex flex-col p-8 md:p-12 hover:bg-white transition-colors duration-300 group">
             <span className="font-editorial text-3xl font-black uppercase tracking-wider text-editorial-dark mb-6 group-hover:text-editorial-neonPink transition-colors">Danh Mục</span>
             <ul className="flex flex-col gap-y-6 text-lg font-editorial font-bold uppercase tracking-widest">
-              <li><LocalizedClientLink href="/store/giay-san-co-nhan-tao" className="hover:text-white hover:bg-editorial-neonVolt transition-all px-2 -mx-2 inline-block">Sân Cỏ Nhân Tạo</LocalizedClientLink></li>
-              <li><LocalizedClientLink href="/store/giay-co-tu-nhien" className="hover:text-white hover:bg-editorial-neonPink transition-all px-2 -mx-2 inline-block">Sân Cỏ Tự Nhiên</LocalizedClientLink></li>
-              <li><LocalizedClientLink href="/store/giay-futsal" className="hover:text-white hover:bg-editorial-neonVolt transition-all px-2 -mx-2 inline-block">Giày Futsal</LocalizedClientLink></li>
-              <li><LocalizedClientLink href="/store/giay-tre-em" className="hover:text-white hover:bg-editorial-neonPink transition-all px-2 -mx-2 inline-block">Giày Trẻ Em</LocalizedClientLink></li>
+              <li><LocalizedClientLink href="/categories/giay-san-co-nhan-tao" className="hover:text-white hover:bg-editorial-neonVolt transition-all px-2 -mx-2 inline-block">Sân Cỏ Nhân Tạo</LocalizedClientLink></li>
+              <li><LocalizedClientLink href="/categories/giay-co-tu-nhien" className="hover:text-white hover:bg-editorial-neonPink transition-all px-2 -mx-2 inline-block">Sân Cỏ Tự Nhiên</LocalizedClientLink></li>
+              <li><LocalizedClientLink href="/categories/giay-futsal" className="hover:text-white hover:bg-editorial-neonVolt transition-all px-2 -mx-2 inline-block">Giày Futsal</LocalizedClientLink></li>
+              <li><LocalizedClientLink href="/categories/giay-tre-em" className="hover:text-white hover:bg-editorial-neonPink transition-all px-2 -mx-2 inline-block">Giày Trẻ Em</LocalizedClientLink></li>
             </ul>
           </div>
 

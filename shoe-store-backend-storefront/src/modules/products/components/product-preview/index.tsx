@@ -58,7 +58,7 @@ export default async function ProductPreview({
         {/* Góc trên trái: Nhãn % Giảm giá */}
         {discountPercentage > 0 && (
           <div className="absolute top-4 left-4 z-10">
-            <span className="bg-editorial-neonPink text-white font-sans text-xs font-bold px-3 py-1 uppercase tracking-wider">
+            <span className="bg-editorial-neonVolt text-editorial-dark font-sans text-xs font-bold px-3 py-1 uppercase tracking-wider">
               -{discountPercentage}%
             </span>
           </div>

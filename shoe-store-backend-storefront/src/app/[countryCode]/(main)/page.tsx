@@ -1,9 +1,15 @@
 import { Metadata } from "next"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
+import SaleSection from "@modules/home/components/sale-section"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import { sdk } from "@lib/config"
+import { getProductPrice } from "@lib/util/get-product-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { HttpTypes } from "@medusajs/types"
+
+export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "Vua Sân Cỏ",
@@ -18,12 +24,41 @@ export default async function Home(props: {
   const { countryCode } = params
   const region = await getRegion(countryCode)
 
+  if (!region) {
+    return null
+  }
+
   // Fetch collections with metadata to access sort_order
   const { collections } = await listCollections({
     fields: "id, handle, title, metadata",
   })
 
-  if (!collections || !region) {
+  // Fetch products directly bypassing Next.js cache
+  const { products: allProducts } = await sdk.client.fetch<{
+    products: HttpTypes.StoreProduct[]
+    count: number
+  }>("/store/products", {
+    method: "GET",
+    query: {
+      limit: 100,
+      region_id: region.id,
+      fields: "*variants.calculated_price,+variants.inventory_quantity,*variants.images,+metadata,+tags",
+    },
+    next: {
+      revalidate: 0,
+    },
+  })
+
+  // Filter products currently on sale
+  const saleProducts = allProducts.filter((product) => {
+    const { cheapestPrice } = getProductPrice({ product })
+    return (
+      cheapestPrice &&
+      cheapestPrice.original_price_number > cheapestPrice.calculated_price_number
+    )
+  })
+
+  if (!collections) {
     return null
   }
 
@@ -52,6 +87,15 @@ export default async function Home(props: {
   return (
     <>
       <Hero />
+      
+      {/* Sale Section (1/3 Banner + 2/3 2x3 Grid of 6 items) */}
+      <SaleSection
+        products={saleProducts}
+        campaignTitle="Sale Đồng Loạt Khai Mạc World Cup 2026"
+        endDate="2026-06-09T00:00:00Z"
+        region={region}
+      />
+
       <div className="bg-editorial-light border-y-8 border-editorial-dark pt-16 pb-20 relative overflow-hidden">
         {/* NOISE OVERLAY */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] z-0"></div>
